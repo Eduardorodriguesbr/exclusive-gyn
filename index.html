@@ -105,11 +105,13 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 .stag{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:10px}
 .stitle{font-family:var(--serif);font-size:36px;font-weight:500;color:var(--text);letter-spacing:-0.5px}
 
-.search-wrap{position:relative;margin-bottom:24px}
-.search-wrap input{width:100%;padding:16px 20px 16px 48px;border-radius:var(--radius);border:1px solid var(--border);font-size:14px;color:var(--text);background:var(--bg-card);font-family:var(--sans);transition:all .25s}
+.search-wrap{position:relative;margin-bottom:24px;display:flex;gap:10px;align-items:stretch}
+.search-wrap input{flex:1;padding:16px 20px 16px 48px;border-radius:var(--radius);border:1px solid var(--border);font-size:14px;color:var(--text);background:var(--bg-card);font-family:var(--sans);transition:all .25s}
 .search-wrap input::placeholder{color:var(--text-dim)}
 .search-wrap input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px var(--gold-glow)}
 .search-wrap svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--text-dim)}
+.search-btn{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);border:none;padding:0 28px;border-radius:var(--radius);font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .25s;white-space:nowrap}
+.search-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.25)}
 
 .filters{margin-bottom:32px}
 .ftypes{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
@@ -312,7 +314,7 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 
 <div id="pList"><div class="main">
 <div style="margin-bottom:36px"><div class="stag">Catálogo</div><h2 class="stitle">Nossos imóveis</h2></div>
-<div class="search-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Buscar por nome, bairro ou tipo..." id="sI" oninput="doF()"/></div>
+<div class="search-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Buscar por nome, setor ou tipo..." id="sI" onkeydown="if(event.key==='Enter')doF()"/><button class="search-btn" onclick="doF()">Buscar</button></div>
 <div class="filters"><div class="ftypes" id="tPills"></div><div class="fsel-row"><select class="fs" id="fB" onchange="doF()"><option value="">Setor</option><option>Portal do Sol Green</option><option>Setor Bueno</option><option>Jardim Goiás</option><option>Aldeia do Vale</option><option>Marista</option><option>Jardim América</option><option>Setor Oeste</option></select><select class="fs" id="fQ" onchange="doF()"><option value="0">Quartos</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select><select class="fs" id="fP" onchange="doF()"><option value="">Faixa de preço</option><option value="0-500000">Até 500 mil</option><option value="500000-1000000">De 500 mil a 1M</option><option value="1000000-3000000">De 1M a 3M</option><option value="3000000-999999999">Acima de 3M</option></select></div></div>
 <div class="rcount" id="rC"></div>
 <div class="pgrid" id="pG"></div>
