@@ -52,7 +52,7 @@ html.light .slide-tag{color:var(--gold-light);border-color:rgba(201,168,76,.4)}
 html.light .slide-btn{color:#0c0e12}
 html.light .nav-cta{color:#fff!important}
 html.light .acta-btn{color:#fff}
-html.light .dcta{background:linear-gradient(135deg,#0d2a1a,#1a3a28,#0d2018)}
+html.light .dcta{background:linear-gradient(135deg,#0a1628,#142238,#0d2a1a)}
 html.light .dcta h3{color:#ffffff}
 html.light .dcta p{color:rgba(255,255,255,.6)}
 html.light .pc-img svg{stroke:rgba(255,255,255,.2)}
@@ -172,7 +172,7 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 .dtags span{padding:8px 16px;border-radius:100px;border:1px solid var(--border);font-size:12px;color:var(--text-mid);transition:all .2s}
 .dtags span:hover{border-color:var(--gold);color:var(--gold)}
 .dmap{height:200px;background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:32px}
-.dcta{background:linear-gradient(135deg,#0d2a1a,#1a3a28,#0d2018);border-radius:var(--radius-xl);padding:36px;display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;gap:24px;border:1px solid rgba(31,171,114,.15)}
+.dcta{background:linear-gradient(135deg,#0a1628,#142238,#0d2a1a);border-radius:var(--radius-xl);padding:36px;display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;gap:24px;border:1px solid rgba(201,168,76,.1)}
 .dcta h3{font-family:var(--serif);font-size:24px;font-weight:500;color:#ffffff;margin-bottom:6px}
 .dcta p{font-size:13px;color:rgba(255,255,255,.6)}
 .wbtn{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:white;padding:16px 32px;border-radius:var(--radius);font-size:14px;font-weight:500;cursor:pointer;border:none;text-decoration:none;transition:all .25s;flex-shrink:0}
@@ -231,11 +231,11 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 .acard-icon{width:44px;height:44px;background:var(--emerald-glow);border:1px solid rgba(31,171,114,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .acard h4{font-family:var(--serif);font-size:19px;font-weight:500;color:var(--text);margin-bottom:8px}
 .acard p{font-size:13px;color:var(--text-mid);line-height:1.7}
-.acta{background:linear-gradient(135deg,#1a150a,#2a1e0d);border-radius:var(--radius-xl);padding:56px;text-align:center;border:1px solid rgba(201,168,76,.1)}
-.acta h2{font-family:var(--serif);font-size:32px;font-weight:500;color:var(--text);margin-bottom:10px}
-.acta p{font-size:14px;color:var(--text-dim);margin-bottom:28px}
-.acta-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);padding:14px 32px;border-radius:8px;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;transition:all .25s}
-.acta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,168,76,.3)}
+.acta{background:linear-gradient(135deg,#0a1628,#142238,#0d2a1a);border-radius:var(--radius-xl);padding:56px;text-align:center;border:1px solid rgba(201,168,76,.1)}
+.acta h2{font-family:var(--serif);font-size:32px;font-weight:500;color:#ffffff;margin-bottom:10px}
+.acta p{font-size:14px;color:rgba(255,255,255,.6);margin-bottom:28px}
+.acta-btn{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#ffffff;padding:14px 32px;border-radius:8px;font-size:12px;font-weight:500;letter-spacing:1px;text-transform:uppercase;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
+.acta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,211,102,.3)}
 
 .footer{border-top:1px solid var(--border);background:var(--bg-card);padding:56px 28px 36px}
 .footer-inner{max-width:1240px;margin:0 auto}
@@ -361,18 +361,24 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 
 <div id="pDetail" class="detail"><div class="main" id="dC"></div></div>
 
-<div id="pAbout" class="about"><div class="main">
-<div class="dback" onclick="showList()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
-<div class="stag">Sobre nós</div>
-<h2 class="stitle" style="margin-bottom:16px">Exclusive Gyn</h2>
-<p style="font-size:15px;color:var(--text-mid);line-height:1.9;max-width:620px;margin-bottom:48px;font-weight:300">Especialistas em imóveis de alto padrão em Goiânia e região. Com atendimento personalizado e curadoria exclusiva, ajudamos você a encontrar o imóvel perfeito para realizar seus sonhos.</p>
+<div id="pAbout" class="about">
+<div class="ideal-banner" style="background:linear-gradient(135deg,#0d2a1a 0%,#0a1e28 30%,#142238 50%,#1a3050 80%,#0d2a1a 100%)">
+<div class="ideal-banner-overlay"></div>
+<div class="ideal-banner-content">
+<span class="ideal-banner-tag">Sobre nós</span>
+<h2 class="ideal-banner-title">Exclusive Gyn</h2>
+<p class="ideal-banner-sub">Especialistas em imóveis de alto padrão em Goiânia e região. Com atendimento personalizado e curadoria exclusiva, ajudamos você a encontrar o imóvel perfeito para realizar seus sonhos.</p>
+</div>
+</div>
+<div class="main">
+<div class="dback" onclick="showList()" style="margin-bottom:32px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
 <div class="about-grid">
 <div class="acard"><div class="acard-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Transparência</h4><p>Informações claras e honestas sobre cada imóvel. Sem surpresas, sem letras miúdas.</p></div>
 <div class="acard"><div class="acard-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><h4>Curadoria</h4><p>Selecionamos criteriosamente cada imóvel do nosso catálogo para garantir qualidade.</p></div>
 <div class="acard"><div class="acard-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><h4>Atendimento pessoal</h4><p>Cada cliente é único. Ouvimos suas necessidades para a combinação perfeita.</p></div>
 <div class="acard"><div class="acard-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div><h4>Experiência</h4><p>Conhecimento profundo do mercado imobiliário de Goiânia e região.</p></div>
 </div>
-<div class="acta"><h2>Vamos conversar?</h2><p>Entre em contato e conte o que você está buscando</p><a href="https://wa.me/message/7CYPPSIIVHV7E1" target="_blank" rel="noopener" class="acta-btn" style="text-decoration:none"><svg width="16" height="16" viewBox="0 0 24 24" fill="var(--bg)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Falar no WhatsApp</a></div>
+<div class="acta"><h2>Vamos conversar?</h2><p>Entre em contato e conte o que você está buscando</p><a href="https://wa.me/message/7CYPPSIIVHV7E1" target="_blank" rel="noopener" class="acta-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Falar no WhatsApp</a></div>
 </div></div>
 
 <div id="pIdeal" class="ideal" style="display:none">
