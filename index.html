@@ -18,7 +18,7 @@
 --card-shadow:0 24px 80px rgba(0,0,0,.2),0 0 0 1px rgba(201,168,76,.1);
 --serif:'Playfair Display',Georgia,serif;
 --sans:'Outfit',system-ui,sans-serif;
---radius:12px;--radius-lg:18px;--radius-xl:24px;
+--radius:8px;--radius-lg:13px;--radius-xl:21px;--radius-xxl:34px;--phi:1.618;--space-xs:5px;--space-sm:8px;--space-md:13px;--space-lg:21px;--space-xl:34px;--space-2xl:55px;--space-3xl:89px;--space-4xl:144px;
 }
 html.light{
 --gold:#a07830;--gold-light:#c9a84c;--gold-dark:#7a5a20;--gold-glow:rgba(160,120,48,.1);
@@ -62,22 +62,22 @@ html{scroll-behavior:smooth;overflow-x:hidden;width:100%}
 body{font-family:var(--sans);background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden;width:100%;transition:background .4s,color .4s}
 
 .header{position:sticky;top:0;z-index:100;background:var(--header-bg);backdrop-filter:blur(24px) saturate(1.4);border-bottom:1px solid var(--border);transition:background .4s;width:100%}
-.header-inner{max-width:1240px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:72px;gap:12px;position:relative}
+.header-inner{max-width:987px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:89px;gap:13px;position:relative}
 .logo{display:flex;align-items:center;text-decoration:none;cursor:pointer;flex-shrink:0}
 .logo-img{height:48px;width:auto;transition:transform .3s cubic-bezier(.34,1.56,.64,1);filter:brightness(1)}
 .logo:hover .logo-img{transform:scale(1.05)}
 html.light .logo-img{filter:invert(1)}
 html.light .footer-logo{filter:invert(1)}
 nav{display:flex;align-items:center;gap:28px;flex-shrink:1;flex-wrap:nowrap;position:absolute;left:50%;transform:translateX(-50%)}
-.header-right{display:flex;align-items:center;gap:18px;flex-shrink:0}
-nav a{font-size:15px;font-weight:400;color:var(--text-mid);text-decoration:none;letter-spacing:1.5px;text-transform:uppercase;transition:color .25s;cursor:pointer;position:relative}
+.header-right{display:flex;align-items:center;gap:21px;flex-shrink:0}
+nav a{font-size:16px;font-weight:400;color:var(--text-mid);text-decoration:none;letter-spacing:1.3px;text-transform:uppercase;transition:color .25s;cursor:pointer;position:relative}
 nav a:hover,nav a.on{color:var(--gold)}
 nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2px;background:var(--gold);border-radius:1px}
-.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg)!important;padding:10px 24px;border-radius:8px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;font-size:13px;transition:all .25s;border:none;cursor:pointer}
+.nav-cta{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg)!important;padding:8px 24px;border-radius:8px;font-weight:500;letter-spacing:1.3px;text-transform:uppercase;font-size:13px;transition:all .25s;border:none;cursor:pointer}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(201,168,76,.25)}
 .nav-cta::after{display:none!important}
 
-.carousel{position:relative;width:100%;height:480px;overflow:hidden;margin:0;padding:0}
+.carousel{position:relative;width:100%;height:61.8vh;overflow:hidden;margin:0;padding:0}
 .carousel-slides{display:flex;width:300%;height:100%;transition:transform .8s cubic-bezier(.4,0,.15,1)}
 .carousel-slide{width:calc(100%/3);height:100%;position:relative;flex-shrink:0;display:flex;align-items:center;justify-content:center}
 .slide-bg{position:absolute;inset:0}
@@ -88,104 +88,104 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 .slide-decor::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;border-radius:50%;border:1px solid rgba(201,168,76,.08)}
 .slide-decor::after{content:'';position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;border-radius:50%;border:1px solid rgba(201,168,76,.05)}
 .slide-content{position:relative;z-index:2;text-align:center;padding:0 40px;max-width:720px}
-.slide-tag{display:inline-block;font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.3);padding:8px 22px;margin-bottom:24px;font-weight:500}
-.slide-title{font-family:var(--serif);font-size:50px;font-weight:500;color:var(--text);line-height:1.12;margin-bottom:16px;letter-spacing:-0.5px}
+.slide-tag{display:inline-block;font-size:13px;letter-spacing:3.4px;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,.3);padding:8px 22px;margin-bottom:21px;font-weight:500}
+.slide-title{font-family:var(--serif);font-size:53px;font-weight:500;color:var(--text);line-height:1.12;margin-bottom:13px;letter-spacing:-0.5px}
 .slide-title span{color:var(--gold)}
-.slide-sub{font-size:17px;color:var(--text-mid);line-height:1.7;margin-bottom:28px;font-weight:300}
-.slide-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);padding:14px 32px;border-radius:8px;font-size:14px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .25s;border:none;cursor:pointer}
+.slide-sub{font-size:16px;color:var(--text-mid);line-height:1.61818;margin-bottom:21px;font-weight:300}
+.slide-btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);padding:13px 32px;border-radius:8px;font-size:13px;font-weight:500;letter-spacing:1.3px;text-transform:uppercase;text-decoration:none;transition:all .25s;border:none;cursor:pointer}
 .slide-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(201,168,76,.3)}
-.c-dots{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;gap:12px;z-index:10}
+.c-dots{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;gap:13px;z-index:10}
 .c-dot{width:36px;height:3px;border-radius:2px;background:rgba(255,255,255,.15);cursor:pointer;transition:all .35s;border:none}
 .c-dot.on{background:var(--gold);width:56px}
 .c-arrows{position:absolute;top:50%;transform:translateY(-50%);width:100%;display:flex;justify-content:space-between;padding:0 24px;z-index:10;pointer-events:none}
 .c-arrow{pointer-events:all;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.05);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);color:var(--text-mid);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s}
 .c-arrow:hover{background:rgba(201,168,76,.15);border-color:rgba(201,168,76,.3);color:var(--gold)}
 
-.main{max-width:1240px;margin:0 auto;padding:56px 28px 100px}
-.stag{font-size:13px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:10px}
-.stitle{font-family:var(--serif);font-size:38px;font-weight:500;color:var(--text);letter-spacing:-0.5px}
+.main{max-width:987px;margin:0 auto;padding:56px 28px 100px}
+.stag{font-size:13px;letter-spacing:3.4px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:8px}
+.stitle{font-family:var(--serif);font-size:42px;font-weight:500;color:var(--text);letter-spacing:-0.5px}
 
-.search-wrap{position:relative;margin-bottom:24px;display:flex;gap:10px;align-items:stretch}
-.search-wrap input{flex:1;padding:16px 20px 16px 48px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--text);background:var(--bg-card);font-family:var(--sans);transition:all .25s}
+.search-wrap{position:relative;margin-bottom:21px;display:flex;gap:8px;align-items:stretch}
+.search-wrap input{flex:1;padding:13px 20px 16px 48px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--text);background:var(--bg-card);font-family:var(--sans);transition:all .25s}
 .search-wrap input::placeholder{color:var(--text-dim)}
 .search-wrap input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px var(--gold-glow)}
 .search-wrap svg{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--text-dim)}
-.search-btn{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);border:none;padding:0 28px;border-radius:var(--radius);font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .25s;white-space:nowrap}
+.search-btn{background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);border:none;padding:0 28px;border-radius:var(--radius);font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;cursor:pointer;transition:all .25s;white-space:nowrap}
 .search-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.25)}
 
-.filters{margin-bottom:32px}
-.ftypes{display:flex;gap:12px;flex-wrap:nowrap;margin-bottom:16px;overflow-x:auto;padding:6px 2px 10px;overflow-y:visible}
-.fp{display:flex;flex-direction:column;align-items:center;gap:6px;padding:12px 16px;border-radius:var(--radius);font-size:13px;font-weight:400;cursor:pointer;border:1px solid var(--border);color:var(--text-mid);background:transparent;transition:all .35s cubic-bezier(.4,0,.15,1);letter-spacing:.3px;min-width:72px;flex-shrink:0}
+.filters{margin-bottom:34px}
+.ftypes{display:flex;gap:13px;flex-wrap:nowrap;margin-bottom:13px;overflow-x:auto;padding:6px 2px 10px;overflow-y:visible}
+.fp{display:flex;flex-direction:column;align-items:center;gap:6px;padding:13px 16px;border-radius:var(--radius);font-size:13px;font-weight:400;cursor:pointer;border:1px solid var(--border);color:var(--text-mid);background:transparent;transition:all .35s cubic-bezier(.4,0,.15,1);letter-spacing:.3px;min-width:72px;flex-shrink:0}
 .fp:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 24px rgba(201,168,76,.1)}
 .fp.on{border-color:var(--gold);color:var(--gold);background:transparent;font-weight:500;transform:translateY(-4px);box-shadow:0 10px 30px rgba(201,168,76,.15)}
 .fp.on .fp-icon{filter:none}
 .fp-icon{width:48px;height:48px;object-fit:contain;transition:all .35s}
-.fsel-row{display:flex;gap:10px;flex-wrap:wrap;padding:4px 0}
-.fs{padding:12px 18px;border-radius:var(--radius);border:1px solid var(--border);font-size:15px;color:var(--text-mid);background:transparent;cursor:pointer;font-family:var(--sans);transition:all .35s cubic-bezier(.4,0,.15,1);-webkit-appearance:none}
+.fsel-row{display:flex;gap:8px;flex-wrap:wrap;padding:4px 0}
+.fs{padding:13px 18px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--text-mid);background:transparent;cursor:pointer;font-family:var(--sans);transition:all .35s cubic-bezier(.4,0,.15,1);-webkit-appearance:none}
 .fs:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-3px);box-shadow:0 8px 24px rgba(201,168,76,.1)}
 .fs option{background:var(--bg-card);color:var(--text)}
 .fs:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px var(--gold-glow);transform:translateY(-3px)}
-.rcount{font-size:15px;color:var(--text-dim);margin-bottom:20px}
+.rcount{font-size:16px;color:var(--text-dim);margin-bottom:21px}
 
-.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:21px}
 .pc{border-radius:var(--radius-lg);overflow:hidden;background:var(--bg-card);border:1px solid var(--border);cursor:pointer;transition:all .4s cubic-bezier(.4,0,.15,1);opacity:0;animation:cardIn .5s ease-out forwards}
 .pc:hover{transform:translateY(-8px);border-color:rgba(201,168,76,.25);box-shadow:var(--card-shadow)}
 .pc:nth-child(1){animation-delay:.05s}.pc:nth-child(2){animation-delay:.1s}.pc:nth-child(3){animation-delay:.15s}.pc:nth-child(4){animation-delay:.2s}.pc:nth-child(5){animation-delay:.25s}.pc:nth-child(6){animation-delay:.3s}
 @keyframes cardIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-.pc-img{height:280px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.pc-img{height:38.2vh;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
 .pc-img::after{content:'';position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,rgba(0,0,0,.4))}
-.pbadge{position:absolute;top:14px;left:14px;z-index:2;font-size:12px;font-weight:600;padding:5px 12px;border-radius:6px;letter-spacing:1.2px;text-transform:uppercase}
+.pbadge{position:absolute;top:14px;left:14px;z-index:2;font-size:13px;font-weight:600;padding:5px 12px;border-radius:6px;letter-spacing:1.2px;text-transform:uppercase}
 .pbadge-new{background:var(--emerald);color:white}
 .pbadge-oport{background:var(--gold);color:var(--bg)}
 .pbadge-dest{background:linear-gradient(135deg,#3a6bcc,#2a4a9a);color:white}
 .pbadge-reserv{background:var(--copper);color:white}
-.pc-body{padding:20px 22px 22px}
-.pc-type{font-size:12px;font-weight:600;color:var(--emerald);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
-.pc-title{font-family:var(--serif);font-size:22px;font-weight:500;color:var(--text);margin-bottom:12px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.pc-feats{display:flex;gap:16px;font-size:14px;color:var(--text-dim);margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.pc-body{padding:21px 22px 22px}
+.pc-type{font-size:13px;font-weight:600;color:var(--emerald);text-transform:uppercase;letter-spacing:2.1px;margin-bottom:8px}
+.pc-title{font-family:var(--serif);font-size:21px;font-weight:500;color:var(--text);margin-bottom:13px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pc-feats{display:flex;gap:13px;font-size:13px;color:var(--text-dim);margin-bottom:13px;padding-bottom:16px;border-bottom:1px solid var(--border)}
 .pc-feats span{display:flex;align-items:center;gap:5px}
-.pc-price{font-size:24px;font-weight:600;color:var(--gold);letter-spacing:-0.3px}
+.pc-price{font-size:26px;font-weight:600;color:var(--gold);letter-spacing:-0.3px}
 .pc-m2{font-size:13px;color:var(--text-dim);margin-top:3px}
 
 .detail,.about{display:none}
-.dback{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--text-dim);cursor:pointer;margin-bottom:28px;transition:color .2s}
+.dback{display:inline-flex;align-items:center;gap:8px;font-size:16px;color:var(--text-dim);cursor:pointer;margin-bottom:21px;transition:color .2s}
 .dback:hover{color:var(--gold)}
-.dgallery{border-radius:var(--radius-xl);overflow:hidden;margin-bottom:28px;position:relative;height:400px;display:flex;align-items:center;justify-content:center}
+.dgallery{border-radius:var(--radius-xl);overflow:hidden;margin-bottom:21px;position:relative;height:400px;display:flex;align-items:center;justify-content:center}
 .dbadges{display:flex;gap:8px;margin-bottom:18px}
-.dbadges span{font-size:12px;font-weight:600;color:white;padding:6px 14px;border-radius:6px;letter-spacing:1.2px;text-transform:uppercase}
-.dheader{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:32px;gap:28px}
-.dmeta{font-size:13px;font-weight:600;color:var(--emerald);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px}
+.dbadges span{font-size:13px;font-weight:600;color:white;padding:6px 14px;border-radius:6px;letter-spacing:1.2px;text-transform:uppercase}
+.dheader{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:34px;gap:28px}
+.dmeta{font-size:13px;font-weight:600;color:var(--emerald);text-transform:uppercase;letter-spacing:2.1px;margin-bottom:8px}
 .dtitle{font-family:var(--serif);font-size:36px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.2}
-.daddr{font-size:15px;color:var(--text-dim);display:flex;align-items:center;gap:5px}
+.daddr{font-size:16px;color:var(--text-dim);display:flex;align-items:center;gap:5px}
 .dprice-box{text-align:right;flex-shrink:0}
-.dprice-lbl{font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px}
+.dprice-lbl{font-size:13px;color:var(--text-dim);text-transform:uppercase;letter-spacing:2.1px;margin-bottom:6px}
 .dprice{font-size:34px;font-weight:600;color:var(--gold);letter-spacing:-0.5px}
-.dpm2{font-size:14px;color:var(--text-dim);margin-top:3px}
-.dstats{display:grid;gap:12px;margin-bottom:36px}
+.dpm2{font-size:13px;color:var(--text-dim);margin-top:3px}
+.dstats{display:grid;gap:13px;margin-bottom:34px}
 .dst{background:var(--bg-card);border-radius:var(--radius);padding:18px 12px;text-align:center;border:1px solid var(--border)}
 .dst-v{font-size:26px;font-weight:600;color:var(--text);margin-top:8px}
-.dst-l{font-size:11px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1.5px;margin-top:4px;line-height:1.4}
-.dsection{margin-bottom:32px}
-.dstitle{font-family:var(--serif);font-size:24px;font-weight:500;color:var(--text);margin-bottom:14px}
-.ddesc{font-size:16px;color:var(--text-mid);line-height:1.9}
+.dst-l{font-size:10px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1.3px;margin-top:4px;line-height:1.4}
+.dsection{margin-bottom:34px}
+.dstitle{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--text);margin-bottom:13px}
+.ddesc{font-size:16px;color:var(--text-mid);line-height:1.61818}
 .dtags{display:flex;flex-wrap:wrap;gap:8px}
-.dtags span{padding:8px 16px;border-radius:100px;border:1px solid var(--border);font-size:14px;color:var(--text-mid);transition:all .2s}
+.dtags span{padding:8px 16px;border-radius:100px;border:1px solid var(--border);font-size:13px;color:var(--text-mid);transition:all .2s}
 .dtags span:hover{border-color:var(--gold);color:var(--gold)}
-.dmap{height:200px;background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:32px}
-.dcta{background:linear-gradient(135deg,#0a1628,#142238,#0d2a1a);border-radius:var(--radius-xl);padding:36px;display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;gap:24px;border:1px solid rgba(201,168,76,.1)}
+.dmap{height:200px;background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;margin-bottom:34px}
+.dcta{background:linear-gradient(135deg,#0a1628,#142238,#0d2a1a);border-radius:var(--radius-xl);padding:34px;display:flex;align-items:center;justify-content:space-between;margin-bottom:34px;gap:24px;border:1px solid rgba(201,168,76,.1)}
 .dcta h3{font-family:var(--serif);font-size:26px;font-weight:500;color:#ffffff;margin-bottom:6px}
-.dcta p{font-size:15px;color:rgba(255,255,255,.6)}
-.wbtn{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:white;padding:16px 32px;border-radius:var(--radius);font-size:16px;font-weight:500;cursor:pointer;border:none;text-decoration:none;transition:all .25s;flex-shrink:0}
+.dcta p{font-size:16px;color:rgba(255,255,255,.6)}
+.wbtn{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:white;padding:13px 32px;border-radius:var(--radius);font-size:16px;font-weight:500;cursor:pointer;border:none;text-decoration:none;transition:all .25s;flex-shrink:0}
 .wbtn:hover{transform:scale(1.04);box-shadow:0 12px 36px rgba(37,211,102,.3)}
 
-.dgallery-wrap{margin-bottom:24px}
+.dgallery-wrap{margin-bottom:21px}
 .dgallery-main{position:relative;width:100%;max-width:700px;margin:0 auto;border-radius:var(--radius-lg);overflow:hidden}
 .dgallery-main img#galMain{display:block;max-width:100%;max-height:70vh;height:auto;margin:0 auto;border-radius:var(--radius-lg);transition:opacity .3s}
 .gal-arrow{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.15);cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:.85;transition:all .2s;z-index:2}
 .gal-arrow:hover{opacity:1;background:rgba(0,0,0,.75);transform:translateY(-50%) scale(1.08)}
 .gal-arrow-l{left:12px}
 .gal-arrow-r{right:12px}
-.gal-counter{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.55);backdrop-filter:blur(6px);border-radius:100px;padding:6px 16px;color:white;font-size:14px;font-weight:500;letter-spacing:1.2px;z-index:2}
+.gal-counter{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.55);backdrop-filter:blur(6px);border-radius:100px;padding:6px 16px;color:white;font-size:13px;font-weight:500;letter-spacing:1.2px;z-index:2}
 .dgallery-thumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;max-width:700px;margin-left:auto;margin-right:auto}
 .dgallery-thumbs::-webkit-scrollbar{height:4px}
 .dgallery-thumbs::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
@@ -193,187 +193,201 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 .gal-thumb:hover{opacity:.8}
 .gal-thumb.on{opacity:1;border-color:var(--gold)}
 
-.ideal-banner{position:relative;width:100%;height:280px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0a1628 0%,#142238 30%,#1a3050 50%,#0d2a1a 80%,#0a1e14 100%)}
+.ideal-banner{position:relative;width:100%;height:38.2vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0a1628 0%,#142238 30%,#1a3050 50%,#0d2a1a 80%,#0a1e14 100%)}
 .ideal-banner-overlay{position:absolute;inset:0;background:url('') center/cover no-repeat;opacity:.3;z-index:0}
 .ideal-banner::before{content:'';position:absolute;top:-60%;right:-10%;width:500px;height:500px;border-radius:50%;border:1px solid rgba(201,168,76,.08);z-index:1}
 .ideal-banner::after{content:'';position:absolute;bottom:-40%;left:-5%;width:350px;height:350px;border-radius:50%;border:1px solid rgba(201,168,76,.06);z-index:1}
 .ideal-banner-content{position:relative;z-index:2;text-align:center;padding:0 24px}
-.ideal-banner-tag{display:inline-block;font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(201,168,76,.3);padding:8px 20px;border-radius:100px;margin-bottom:20px}
-.ideal-banner-title{font-family:var(--serif);font-size:40px;font-weight:500;color:#ffffff;margin-bottom:12px;line-height:1.2}
-.ideal-banner-sub{font-size:17px;color:rgba(255,255,255,.6);max-width:480px;margin:0 auto;line-height:1.7;font-weight:300}
+.ideal-banner-tag{display:inline-block;font-size:13px;letter-spacing:2.1px;text-transform:uppercase;color:var(--gold-light);border:1px solid rgba(201,168,76,.3);padding:8px 20px;border-radius:100px;margin-bottom:21px}
+.ideal-banner-title{font-family:var(--serif);font-size:42px;font-weight:500;color:#ffffff;margin-bottom:13px;line-height:1.2}
+.ideal-banner-sub{font-size:16px;color:rgba(255,255,255,.6);max-width:480px;margin:0 auto;line-height:1.61818;font-weight:300}
 
-.ideal-form{max-width:640px;margin:0 auto}
-.ideal-section{margin-bottom:28px}
-.ideal-label{display:block;font-size:13px;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;font-weight:500}
-.ideal-textarea{width:100%;padding:18px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--text);background:transparent;font-family:var(--sans);resize:vertical;transition:all .35s;line-height:1.7}
+.ideal-form{max-width:610px;margin:0 auto}
+.ideal-section{margin-bottom:21px}
+.ideal-label{display:block;font-size:13px;color:var(--text-dim);text-transform:uppercase;letter-spacing:2.1px;margin-bottom:8px;font-weight:500}
+.ideal-textarea{width:100%;padding:18px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--text);background:transparent;font-family:var(--sans);resize:vertical;transition:all .35s;line-height:1.61818}
 .ideal-textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px var(--gold-glow)}
-.ideal-textarea::placeholder{color:var(--text-dim);font-size:15px}
+.ideal-textarea::placeholder{color:var(--text-dim);font-size:16px}
 .ideal-divider{text-align:center;margin:32px 0;position:relative}
 .ideal-divider::before{content:'';position:absolute;left:0;right:0;top:50%;height:1px;background:var(--border)}
-.ideal-divider span{position:relative;background:var(--bg);padding:0 20px;font-size:14px;color:var(--text-dim);letter-spacing:1.2px;text-transform:uppercase}
-.ideal-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:8px}
+.ideal-divider span{position:relative;background:var(--bg);padding:0 20px;font-size:13px;color:var(--text-dim);letter-spacing:1.2px;text-transform:uppercase}
+.ideal-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:8px}
 .ideal-field{display:flex;flex-direction:column}
-.ideal-input{padding:14px 16px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--text);background:transparent;font-family:var(--sans);transition:all .35s;-webkit-appearance:none}
+.ideal-input{padding:13px 16px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--text);background:transparent;font-family:var(--sans);transition:all .35s;-webkit-appearance:none}
 .ideal-input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px var(--gold-glow)}
 .ideal-input:hover{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,168,76,.08)}
 .ideal-input::placeholder{color:var(--text-dim)}
 .ideal-input option{background:var(--bg-card);color:var(--text)}
-.ideal-btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:32px;padding:18px 32px;background:#25D366;color:white;border:none;border-radius:var(--radius);font-family:var(--sans);font-size:17px;font-weight:600;cursor:pointer;transition:all .3s;letter-spacing:.5px}
+.ideal-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;margin-top:32px;padding:18px 32px;background:#25D366;color:white;border:none;border-radius:var(--radius);font-family:var(--sans);font-size:16px;font-weight:600;cursor:pointer;transition:all .3s;letter-spacing:.5px}
 .ideal-btn:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(37,211,102,.3)}
 
 
-.art-section{padding:20px 0 40px}
-.art-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:768px){.art-grid{grid-template-columns:1fr;gap:12px}.art-full-title{font-size:28px}}
+.art-section{padding:21px 0 40px}
+.art-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+@media(max-width:768px){.art-grid{grid-template-columns:1fr;gap:13px}.art-full-title{font-size:26px}}
 .art-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;transition:all .35s cubic-bezier(.4,0,.15,1);display:flex;flex-direction:row;align-items:stretch}
 .art-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:0 12px 36px rgba(201,168,76,.1)}
 .art-card-img{width:100px;min-height:100px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .art-card-img img{width:100%;height:100%;object-fit:cover}
-.art-card-body{padding:20px;flex:1;display:flex;flex-direction:column;justify-content:center}
-.art-card-tag{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500}
-.art-card-title{font-family:var(--serif);font-size:18px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.4}
-.art-card-preview{font-size:14px;color:var(--text-mid);line-height:1.6;margin-bottom:10px}
+.art-card-body{padding:21px;flex:1;display:flex;flex-direction:column;justify-content:center}
+.art-card-tag{font-size:13px;letter-spacing:2.1px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;font-weight:500}
+.art-card-title{font-family:var(--serif);font-size:16px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.4}
+.art-card-preview{font-size:13px;color:var(--text-mid);line-height:1.618;margin-bottom:8px}
 .art-card-link{font-size:13px;color:var(--gold);letter-spacing:1.2px;text-transform:uppercase;font-weight:500}
 .article-page{min-height:80vh}
-.art-full-tag{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;font-weight:500}
-.art-full-title{font-family:var(--serif);font-size:38px;font-weight:500;color:var(--text);margin-bottom:32px;line-height:1.3;max-width:700px}
-.art-full-body{max-width:700px}
-.art-full-body p{font-size:17px;color:var(--text-mid);line-height:1.9;margin-bottom:20px}
+.art-full-tag{font-size:13px;letter-spacing:2.1px;text-transform:uppercase;color:var(--gold);margin-bottom:13px;font-weight:500}
+.art-full-title{font-family:var(--serif);font-size:42px;max-width:610px;font-weight:500;color:var(--text);margin-bottom:34px;line-height:1.3;max-width:700px}
+.art-full-body{max-width:610px}
+.art-full-body p{font-size:16px;color:var(--text-mid);line-height:1.61818;margin-bottom:21px}
+.art-full-body h3{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--text);margin:40px 0 16px;padding-left:16px;border-left:3px solid var(--gold)}
+.art-full-body .art-highlight{background:linear-gradient(135deg,#0a1628,#142238,#0d2a1a);border-radius:var(--radius-lg);padding:21px 28px;margin:28px 0;border:1px solid rgba(201,168,76,.12)}
+.art-full-body .art-highlight p{color:rgba(255,255,255,.8);font-size:16px;margin-bottom:8px}
+.art-full-body .art-highlight strong{color:#ffffff}
+.art-full-body .art-stat-row{display:flex;gap:13px;margin:24px 0;flex-wrap:wrap}
+.art-full-body .art-stat{flex:1;min-width:120px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px 14px;text-align:center}
+.art-full-body .art-stat .art-stat-num{font-size:26px;font-weight:700;color:var(--gold);display:block;margin-bottom:4px}
+.art-full-body .art-stat .art-stat-label{font-size:10px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1.2px;line-height:1.4}
+.art-full-body .art-icon-item{display:flex;align-items:flex-start;gap:13px;margin-bottom:13px;padding:13px;background:var(--bg-card);border-radius:var(--radius);border:1px solid var(--border)}
+.art-full-body .art-icon-item .art-icon-emoji{font-size:26px;flex-shrink:0;width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--gold-glow);border-radius:10px}
+.art-full-body .art-icon-item p{margin:0;font-size:16px;color:var(--text-mid);line-height:1.61818}
+.art-full-body .art-icon-item strong{color:var(--text)}
+.art-full-body .art-divider{height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:36px 0;opacity:.3}
+.art-full-body .art-sources{font-size:13px;color:var(--text-dim);margin-top:32px;padding-top:20px;border-top:1px solid var(--border);line-height:1.61818}
 
 
 
-.sim-scroll-btn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:10px 20px;background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:var(--radius);font-family:var(--sans);font-size:14px;font-weight:500;letter-spacing:1.2px;cursor:pointer;transition:all .35s cubic-bezier(.4,0,.15,1)}
+.sim-scroll-btn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:8px 20px;background:transparent;border:1px solid var(--gold);color:var(--gold);border-radius:var(--radius);font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:1.2px;cursor:pointer;transition:all .35s cubic-bezier(.4,0,.15,1)}
 .sim-scroll-btn:hover{background:var(--gold-glow);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.15)}
 
-.sim-section{margin-top:40px;margin-bottom:32px}
-.sim-wrap{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:32px;max-width:700px;margin:0 auto}
-.sim-title{font-family:var(--serif);font-size:24px;font-weight:500;color:var(--text);margin-bottom:6px;text-align:center}
-.sim-sub{font-size:14px;color:var(--text-dim);text-align:center;margin-bottom:24px}
-.sim-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
-.sim-field label{display:block;font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px;font-weight:500}
-.sim-field input,.sim-field select{width:100%;padding:12px 14px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--text);background:transparent;font-family:var(--sans);transition:all .3s;-webkit-appearance:none}
+.sim-section{margin-top:40px;margin-bottom:34px}
+.sim-wrap{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-xl);padding:34px;max-width:610px;margin:0 auto}
+.sim-title{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--text);margin-bottom:6px;text-align:center}
+.sim-sub{font-size:13px;color:var(--text-dim);text-align:center;margin-bottom:21px}
+.sim-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:21px}
+.sim-field label{display:block;font-size:13px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1.3px;margin-bottom:6px;font-weight:500}
+.sim-field input,.sim-field select{width:100%;padding:13px 14px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--text);background:transparent;font-family:var(--sans);transition:all .3s;-webkit-appearance:none}
 .sim-field input:focus,.sim-field select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px var(--gold-glow)}
 .sim-field select option{background:var(--bg-card);color:var(--text)}
-.sim-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);border:none;border-radius:var(--radius);font-family:var(--sans);font-size:15px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;margin-bottom:20px}
+.sim-btn{width:100%;padding:13px;background:linear-gradient(135deg,var(--gold),var(--gold-dark));color:var(--bg);border:none;border-radius:var(--radius);font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:1.3px;text-transform:uppercase;cursor:pointer;transition:all .3s;margin-bottom:21px}
 .sim-btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.25)}
-.sim-result{display:none;background:linear-gradient(135deg,#0a1628,#142238,#0d2a1a);border-radius:var(--radius-lg);padding:24px;margin-bottom:20px}
-.sim-result-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:16px}
+.sim-result{display:none;background:linear-gradient(135deg,#0a1628,#142238,#0d2a1a);border-radius:var(--radius-lg);padding:21px;margin-bottom:21px}
+.sim-result-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px;margin-bottom:13px}
 .sim-result-item{text-align:center}
-.sim-result-label{font-size:11px;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px}
-.sim-result-value{font-size:22px;font-weight:600;color:#ffffff}
+.sim-result-label{font-size:10px;color:rgba(255,255,255,.65);text-transform:uppercase;letter-spacing:1.3px;margin-bottom:4px}
+.sim-result-value{font-size:21px;font-weight:600;color:#ffffff}
 .sim-result-note{font-size:13px;color:rgba(255,255,255,.6);text-align:center;line-height:1.5}
-.sim-banks{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
-.sim-bank-link{display:inline-flex;align-items:center;gap:6px;padding:10px 16px;border-radius:var(--radius);border:1px solid var(--border);font-size:13px;color:var(--text-mid);text-decoration:none;transition:all .3s;font-weight:500}
+.sim-banks{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.sim-bank-link{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;border-radius:var(--radius);border:1px solid var(--border);font-size:13px;color:var(--text-mid);text-decoration:none;transition:all .3s;font-weight:500}
 .sim-bank-link:hover{border-color:var(--gold);color:var(--gold);transform:translateY(-2px)}
 @media(max-width:480px){.sim-grid{grid-template-columns:1fr}.sim-result-grid{grid-template-columns:1fr}}
 
-.wafloat{position:fixed;bottom:24px;right:24px;width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:99;transition:all .3s;text-decoration:none}
+.wafloat{position:fixed;bottom:24px;right:24px;width:60px;height:72px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.4);z-index:99;transition:all .3s;text-decoration:none}
 .wafloat:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.5)}
 .wafloat svg{filter:drop-shadow(0 1px 2px rgba(0,0,0,.15))}
 
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:40px}
-.acard{background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid var(--border);padding:32px;transition:all .3s}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:21px;margin-bottom:34px}
+.acard{background:var(--bg-card);border-radius:var(--radius-lg);border:1px solid var(--border);padding:34px;transition:all .3s}
 .acard:hover{border-color:rgba(201,168,76,.2);transform:translateY(-3px)}
 .acard-icon{width:44px;height:44px;background:var(--emerald-glow);border:1px solid rgba(31,171,114,.2);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .acard h4{font-family:var(--serif);font-size:21px;font-weight:500;color:var(--text);margin-bottom:8px}
-.acard p{font-size:15px;color:var(--text-mid);line-height:1.7}
+.acard p{font-size:16px;color:var(--text-mid);line-height:1.61818}
 .acta{background:linear-gradient(135deg,#0a1628,#142238,#0d2a1a);border-radius:var(--radius-xl);padding:56px;text-align:center;border:1px solid rgba(201,168,76,.1)}
-.acta h2{font-family:var(--serif);font-size:34px;font-weight:500;color:#ffffff;margin-bottom:10px}
-.acta p{font-size:16px;color:rgba(255,255,255,.6);margin-bottom:28px}
-.acta-btn{display:inline-flex;align-items:center;gap:10px;background:#25D366;color:#ffffff;padding:14px 32px;border-radius:8px;font-size:14px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
+.acta h2{font-family:var(--serif);font-size:34px;font-weight:500;color:#ffffff;margin-bottom:8px}
+.acta p{font-size:16px;color:rgba(255,255,255,.6);margin-bottom:21px}
+.acta-btn{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#ffffff;padding:13px 32px;border-radius:8px;font-size:13px;font-weight:500;letter-spacing:1.2px;text-transform:uppercase;border:none;cursor:pointer;transition:all .25s;text-decoration:none}
 .acta-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(37,211,102,.3)}
 
 .footer{border-top:1px solid var(--border);background:var(--bg-card);padding:56px 28px 36px}
-.footer-inner{max-width:1240px;margin:0 auto}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:40px}
-.footer-brand{font-family:var(--serif);font-size:24px;font-weight:500;color:var(--text);margin-bottom:12px}
+.footer-inner{max-width:987px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:34px}
+.footer-brand{font-family:var(--serif);font-size:26px;font-weight:500;color:var(--text);margin-bottom:13px}
 .footer-brand em{font-style:normal;color:var(--gold)}
-.footer-desc{font-size:15px;color:var(--text-dim);line-height:1.8;max-width:360px}
-.footer h5{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:3px;color:var(--gold);margin-bottom:16px}
-.footer a{display:block;font-size:15px;color:var(--text-dim);text-decoration:none;margin-bottom:10px;transition:color .2s}
+.footer-desc{font-size:16px;color:var(--text-dim);line-height:1.61818;max-width:360px}
+.footer h5{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:2.1px;color:var(--gold);margin-bottom:13px}
+.footer a{display:block;font-size:16px;color:var(--text-dim);text-decoration:none;margin-bottom:8px;transition:color .2s}
 .footer a:hover{color:var(--gold)}
 .footer-bot{border-top:1px solid var(--border);padding-top:24px;text-align:center;font-size:13px;color:var(--text-dim);letter-spacing:1.2px}
 .empty{text-align:center;padding:72px 0;grid-column:1/-1}
-.empty h3{font-family:var(--serif);font-size:24px;color:var(--text);margin-bottom:8px}
-.empty p{font-size:15px;color:var(--text-dim)}
+.empty h3{font-family:var(--serif);font-size:26px;color:var(--text);margin-bottom:8px}
+.empty p{font-size:16px;color:var(--text-dim)}
 
 @media(max-width:768px){
-  .header-inner{padding:0 16px;height:60px}
+  .header-inner{padding:0 16px;height:72px}
   .logo-img{height:38px}
-  nav{position:static;transform:none;gap:16px}
+  nav{position:static;transform:none;gap:13px}
   nav a{font-size:13px;letter-spacing:1.2px}
-  .header-right{gap:10px}
-  .nav-cta{padding:8px 14px;font-size:12px;letter-spacing:1.2px}
+  .header-right{gap:8px}
+  .nav-cta{padding:8px 14px;font-size:13px;letter-spacing:1.2px}
   .toggle-wrap{margin-right:0}
   .toggle-track{width:44px;height:24px}
   .toggle-thumb{width:18px;height:18px;top:2px;left:2px}
   html.light .toggle-thumb{left:22px}
-  .carousel{height:360px}
+  .carousel{height:50vh}
   .gal-thumb{width:60px;height:44px}
   .slide-content{padding:0 20px}
-  .slide-tag{font-size:11px;letter-spacing:2.5px;padding:6px 14px;margin-bottom:16px}
+  .slide-tag{font-size:10px;letter-spacing:2.5px;padding:6px 14px;margin-bottom:13px}
   .slide-title{font-size:30px}
-  .slide-sub{font-size:15px;margin-bottom:20px}
+  .slide-sub{font-size:16px;margin-bottom:21px}
   .slide-btn{padding:11px 22px;font-size:13px}
   .c-arrows{padding:0 8px}
   .c-arrow{width:36px;height:36px}
   .slide-decor::before{width:400px;height:400px}
-  .slide-decor::after{width:280px;height:280px}
-  .main{padding:32px 16px 60px}
+  .slide-decor::after{width:280px;height:38.2vh}
+  .main{padding:34px 16px 60px}
   .stitle{font-size:30px}
-  .pgrid{grid-template-columns:1fr 1fr;gap:14px}
+  .pgrid{grid-template-columns:1fr 1fr;gap:13px}
   .pcard-img{height:160px}
-  .pcard-body{padding:14px}
-  .pcard-title{font-size:18px}
-  .pcard-price{font-size:20px}
+  .pcard-body{padding:13px}
+  .pcard-title{font-size:16px}
+  .pcard-price{font-size:21px}
   .dheader{flex-direction:column}.dprice-box{text-align:left}
   .detail-gallery{height:240px}
   .detail-title{font-size:26px}
   .dcta{flex-direction:column;text-align:center}
-  .footer{padding:36px 16px 24px}
+  .footer{padding:34px 16px 24px}
   .footer-grid{grid-template-columns:1fr;gap:24px}
   .about-grid{grid-template-columns:1fr}
-  .acta{padding:32px 20px}
+  .acta{padding:34px 20px}
   .acta h2{font-size:26px}
   .ftypes{gap:6px}
-  .fp{padding:10px 8px;font-size:12px;min-width:auto}
+  .fp{padding:8px 8px;font-size:13px;min-width:auto}
   .fp-icon{width:40px;height:40px}
   .dstats{grid-template-columns:repeat(4,1fr)!important;gap:6px}
-  .dst{padding:12px 4px}
-  .dst-v{font-size:20px;margin-top:6px}
+  .dst{padding:13px 4px}
+  .dst-v{font-size:21px;margin-top:6px}
   .dst-l{font-size:10px;letter-spacing:1.2px}
   .dst svg{width:18px;height:18px}
 }
 @media(max-width:480px){
-  .header-inner{padding:0 12px;height:56px}
+  .header-inner{padding:0 12px;height:55px}
   .logo-img{height:34px}
-  nav{gap:10px}
-  nav a{font-size:12px;letter-spacing:1px}
+  nav{gap:8px}
+  nav a{font-size:13px;letter-spacing:1px}
   .header-right{gap:8px}
-  .nav-cta{padding:7px 12px;font-size:11px}
-  .carousel{height:320px}
+  .nav-cta{padding:7px 12px;font-size:10px}
+  .carousel{height:42vh}
   .gal-thumb{width:52px;height:38px}
   .slide-title{font-size:26px}
-  .slide-sub{font-size:14px}
-  .slide-btn{padding:10px 18px;font-size:12px}
-  .main{padding:24px 12px 48px}
+  .slide-sub{font-size:13px}
+  .slide-btn{padding:8px 18px;font-size:13px}
+  .main{padding:21px 12px 48px}
   .stitle{font-size:26px}
-  .pgrid{grid-template-columns:1fr;gap:12px}
+  .pgrid{grid-template-columns:1fr;gap:13px}
   .pcard-img{height:180px}
   .ftypes{gap:4px;flex-wrap:nowrap;overflow-x:visible;justify-content:space-between;width:100%}
-  .fp{padding:8px 6px;font-size:11px;min-width:auto;flex:1}
+  .fp{padding:8px 6px;font-size:10px;min-width:auto;flex:1}
   .fp-icon{width:36px;height:36px}
   .fsel-row{flex-direction:column}
   .fsel{width:100%}
-  .search-wrap input{padding:12px 16px 12px 40px;font-size:15px}
-  .detail-title{font-size:24px}
+  .search-wrap input{padding:13px 16px 12px 40px;font-size:16px}
+  .detail-title{font-size:26px}
   .ideal-grid{grid-template-columns:1fr}
-  .ideal-banner{height:220px}
-  .ideal-banner-title{font-size:28px}
-  .ideal-banner-sub{font-size:15px}
+  .ideal-banner{height:233px}
+  .ideal-banner-title{font-size:26px}
+  .ideal-banner-sub{font-size:16px}
   .dstats{grid-template-columns:repeat(4,1fr)!important;gap:4px}
-  .dst{padding:10px 2px}
-  .dst-v{font-size:18px;margin-top:4px}
+  .dst{padding:8px 2px}
+  .dst-v{font-size:16px;margin-top:4px}
   .dst-l{font-size:6.5px;letter-spacing:1px}
   .dst svg{width:16px;height:16px}
 }
@@ -398,7 +412,7 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 </div>
 
 <div id="pList"><div class="main">
-<div style="margin-bottom:36px;text-align:center"><div class="stag">Catálogo</div><h2 class="stitle">Nossos imóveis</h2></div>
+<div style="margin-bottom:34px;text-align:center"><div class="stag">Catálogo</div><h2 class="stitle">Nossos imóveis</h2></div>
 <div class="search-wrap"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="text" placeholder="Buscar por nome, setor ou tipo..." id="sI" onkeydown="if(event.key==='Enter')doF()"/><button class="search-btn" onclick="doF()">Buscar</button></div>
 <div class="filters"><div class="ftypes" id="tPills"></div><div class="fsel-row"><select class="fs" id="fB" onchange="doF()"><option value="">Setor</option><option>Portal do Sol Green</option><option>Setor Bueno</option><option>Jardim Goiás</option><option>Aldeia do Vale</option><option>Marista</option><option>Jardim América</option><option>Setor Oeste</option></select><select class="fs" id="fQ" onchange="doF()"><option value="0">Quartos</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select><select class="fs" id="fP" onchange="doF()"><option value="">Faixa de preço</option><option value="0-500000">Até 500 mil</option><option value="500000-1000000">De 500 mil a 1M</option><option value="1000000-3000000">De 1M a 3M</option><option value="3000000-999999999">Acima de 3M</option></select></div></div>
 <div class="rcount" id="rC"></div>
@@ -417,7 +431,7 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 </div>
 </div>
 <div class="main">
-<div class="dback" onclick="showList()" style="margin-bottom:32px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
+<div class="dback" onclick="showList()" style="margin-bottom:34px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
 <div class="about-grid">
 <div class="acard"><div class="acard-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h4>Transparência</h4><p>Informações claras e honestas sobre cada imóvel. Sem surpresas, sem letras miúdas.</p></div>
 <div class="acard"><div class="acard-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--emerald)" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div><h4>Curadoria</h4><p>Selecionamos criteriosamente cada imóvel do nosso catálogo para garantir qualidade.</p></div>
@@ -437,7 +451,7 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 </div>
 </div>
 <div class="main">
-<div class="dback" onclick="showList()" style="margin-bottom:32px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
+<div class="dback" onclick="showList()" style="margin-bottom:34px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
 
 <div class="ideal-form">
 <div class="ideal-section">
@@ -581,63 +595,123 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 <div class="dback" onclick="closeArticle('art1')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
 <div class="art-full-tag">Mercado Imobiliário</div>
 <h1 class="art-full-title">Goiânia: o 3º maior mercado imobiliário do Brasil</h1>
-<div class="art-full-body"><p>Goiânia vive um dos momentos mais expressivos da sua história no setor imobiliário. Dados da Associação das Empresas do Mercado Imobiliário de Goiás (Ademi-GO) confirmam que a capital é hoje o <strong>3º maior mercado imobiliário do Brasil</strong>, atrás apenas de São Paulo e Rio de Janeiro.</p>
-<p>Em 2024, foram comercializadas <strong>11.797 unidades residenciais</strong> na capital — o maior número já registrado desde 2010, quando a pesquisa começou a ser realizada. O volume total de vendas alcançou aproximadamente <strong>R$ 8,2 bilhões</strong>, considerando imóveis residenciais, comerciais e horizontais. Apenas no primeiro trimestre de 2025, as vendas cresceram impressionantes <strong>47%</strong> em comparação com o mesmo período do ano anterior.</p>
-<p>A valorização dos imóveis acompanha o ritmo. O preço médio do metro quadrado passou de R$ 9.287 em 2024 para <strong>R$ 10.261 no início de 2025</strong>, e a valorização média chegou a <strong>13% ao ano</strong> em determinados períodos — superando a inflação e a maioria dos investimentos de renda fixa.</p>
-<p>O aquecimento não é por acaso. O PIB de Goiás cresceu percentualmente acima do PIB nacional nos últimos 5 anos, impulsionado pelo agronegócio — o estado é um dos maiores produtores de grãos e proteína animal do país. A população da região metropolitana cresceu <strong>18,9%</strong> entre 2010 e 2022 (IBGE), gerando demanda contínua por moradia e serviços. Além disso, eventos como o <strong>MotoGP 2026</strong>, que movimentou mais de R$ 868 milhões na economia goiana com público de 148 mil pessoas, projetam a cidade internacionalmente.</p>
-<p>A projeção da cidade não para. A <strong>Flamboyant Urbanismo</strong>, em parceria com o escritório britânico <strong>Foster + Partners</strong> (referência mundial em arquitetura) e a espanhola <strong>Wavegarden</strong> (líder global em ondas artificiais), anunciou a construção de uma <strong>praia artificial com ondas para surf</strong> em frente ao Autódromo. O megacomplexo incluirá hotel de padrão internacional, residências de alto padrão e mall gastronômico — um empreendimento que promete reposicionar Goiânia no mapa do turismo e do lazer de classe mundial.</p>
-<p>Goiânia também foi reconhecida como <strong>"Cidade Árvore do Mundo"</strong> e é a segunda capital mais arborizada do Brasil. Com o Hospital Albert Einstein (primeira unidade fora de SP), a etapa do MotoGP (contrato até 2030), a praia artificial e um mercado imobiliário que movimenta bilhões, a capital goiana se consolida como um dos destinos mais promissores para investimento no país.</p>
-<p style="font-size:12px;color:var(--text-dim);margin-top:24px;padding-top:16px;border-top:1px solid var(--border)"><strong>Fontes:</strong> Ademi-GO / Brain Inteligência Estratégica (Pesquisa 2024-2025), IBGE (Censo 2022), Instituto Mauro Borges (IMB), FipeZap 2025, Flamboyant Urbanismo / Foster + Partners / Wavegarden, Governo de Goiás.</p></div>
+<div class="art-full-body"><p>Existe um fenômeno acontecendo no coração do Brasil que poucos perceberam a tempo. Enquanto São Paulo e Rio de Janeiro dominam as manchetes, Goiânia silenciosamente se tornou o <strong>terceiro maior mercado imobiliário do país</strong> — e quem entendeu isso cedo já colhe os frutos.</p>
+
+<p>Os números são impressionantes. Em 2024, a capital goiana bateu seu recorde histórico: <strong>11.797 apartamentos comercializados</strong>, movimentando R$ 8,2 bilhões. Mas o que realmente surpreende é o ritmo — no primeiro trimestre de 2025, as vendas cresceram 47% em relação ao mesmo período do ano anterior. Não estamos falando de uma alta pontual. Estamos falando de uma cidade que cresce mais rápido que a média nacional há cinco anos consecutivos.</p>
+
+<p>O preço do metro quadrado acompanha essa transformação. Saltou de R$ 9.287 em 2024 para R$ 10.261 no início de 2025. A valorização média atingiu 13% ao ano — o dobro da inflação e mais do que a maioria dos investimentos de renda fixa entrega. Quem comprou imóvel em Goiânia nos últimos três anos viu seu patrimônio valorizar em torno de 20% ao ano.</p>
+
+<div class="art-stat-row">
+<div class="art-stat"><span class="art-stat-num">3º</span><span class="art-stat-label">Mercado imobiliário do Brasil</span></div>
+<div class="art-stat"><span class="art-stat-num">47%</span><span class="art-stat-label">Crescimento no 1º tri 2025</span></div>
+<div class="art-stat"><span class="art-stat-num">13%</span><span class="art-stat-label">Valorização média anual</span></div>
+<div class="art-stat"><span class="art-stat-num">R$ 8,2 bi</span><span class="art-stat-label">Vendas em 2024</span></div>
+</div>
+
+<p>Mas o que explica esse fenômeno? A resposta está na economia real. O PIB de Goiás cresceu acima da média nacional nos últimos cinco anos, impulsionado por um agronegócio que é potência mundial. A riqueza gerada no campo se transforma em investimento urbano — e Goiânia é o destino natural desse capital. A população da região metropolitana cresceu 18,9% entre 2010 e 2022, segundo o IBGE, gerando uma demanda por moradia que simplesmente não para.</p>
+
+<p>E a cidade não está apenas crescendo. Está se projetando para o mundo. O <strong>MotoGP 2026</strong> trouxe 148 mil pessoas ao Autódromo, com transmissão para mais de 200 países e impacto estimado de R$ 868 milhões na economia — e o contrato está garantido até 2030. A <strong>Flamboyant Urbanismo</strong>, em parceria com o lendário escritório britânico <strong>Foster + Partners</strong> e a espanhola <strong>Wavegarden</strong>, anunciou a construção de uma <strong>praia artificial com ondas para surf</strong> em frente ao Autódromo, com hotel internacional, residências de luxo e mall gastronômico. Goiânia foi reconhecida como <strong>"Cidade Árvore do Mundo"</strong> e é a segunda capital mais arborizada do Brasil.</p>
+
+<p>Quando uma cidade combina crescimento econômico sólido, valorização imobiliária consistente, projeção internacional e qualidade de vida invejável, o resultado é inevitável: quem investe agora, colhe amanhã. E quem espera, paga mais caro.</p>
+
+<div class="art-divider"></div>
+<p class="art-sources"><strong>Fontes:</strong> Ademi-GO / Brain Inteligência Estratégica, IBGE (Censo 2022), Instituto Mauro Borges, FipeZap 2025, Flamboyant Urbanismo / Foster + Partners / Wavegarden, Governo de Goiás.</p></div>
 </div></div>
 <div id="art2" class="article-page" style="display:none"><div class="main">
 <div class="dback" onclick="closeArticle('art2')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
 <div class="art-full-tag">Investimento</div>
 <h1 class="art-full-title">Por que investir em imóveis em Goiânia é uma decisão inteligente</h1>
-<div class="art-full-body"><p>Quem investiu em imóveis em Goiânia nos últimos anos viu seu patrimônio crescer de forma consistente. Segundo a Ademi-GO, os imóveis na capital tiveram valorização em torno de <strong>20% ao ano nos últimos três anos</strong> — um retorno que supera aplicações como Tesouro Direto, CDBs e fundos de renda fixa.</p>
-<p>A liquidez do mercado impressiona. O IVV (Índice de Velocidade de Vendas) gira em torno de <strong>10% ao mês</strong>. Na prática, se não houvesse mais lançamentos, todo o estoque disponível se esgotaria em apenas 10 meses. Essa é uma das maiores liquidez do mercado imobiliário brasileiro.</p>
-<p>O perfil dos compradores reforça a atratividade: levantamentos recentes mostram que <strong>mais de 90%</strong> das unidades de empreendimentos de alto padrão foram adquiridas por investidores, dos quais <strong>53% residem fora de Goiânia</strong> e <strong>9% moram fora do Brasil</strong>. Os principais bairros de origem dos investidores locais são Setor Oeste (25%), Setor Bueno (17,9%) e Setor Marista (14,3%).</p>
-<p>O metro quadrado de Goiânia, embora em alta, ainda é <strong>significativamente mais competitivo</strong> que o de São Paulo (R$ 11.200/m²), Rio de Janeiro (R$ 10.700/m²) e Brasília (R$ 9.800/m²). Isso oferece margem de valorização futura robusta. O novo teto do SFH de <strong>R$ 2,25 milhões</strong> ampliou o acesso a juros regulados para imóveis de alto padrão, criando uma janela de oportunidade única.</p>
-<p>Com crescimento econômico impulsionado pelo agronegócio, expansão populacional acima da média nacional, presença internacional de investidores e a realização de eventos globais como o MotoGP (contrato garantido até 2030), Soma-se a isso a <strong>praia artificial com ondas</strong> (parceria Flamboyant Urbanismo + Foster + Partners + Wavegarden), que criará um novo polo de valorização junto ao Autódromo, e o reconhecimento da cidade como <strong>"Cidade Árvore do Mundo"</strong>. Goiânia reúne todos os fatores que um investidor inteligente procura: <strong>segurança, rentabilidade e perspectiva de longo prazo</strong>.</p>
-<p style="font-size:12px;color:var(--text-dim);margin-top:24px;padding-top:16px;border-top:1px solid var(--border)"><strong>Fontes:</strong> Ademi-GO (Pesquisa 2024-2025), FipeZap, Datazap, Ávolli Incorporadora (Perfil do Comprador 15W22), Resolução CMN 5.255/2025.</p></div>
+<div class="art-full-body"><p>Imagine um investimento que rendeu 20% ao ano nos últimos três anos, com liquidez alta e segurança patrimonial. Não estamos falando de criptomoedas voláteis ou ações arriscadas. Estamos falando de <strong>imóveis em Goiânia</strong> — e os dados comprovam que a capital goiana se tornou um dos destinos mais inteligentes para quem busca rentabilidade real.</p>
+
+<p>Vamos aos fatos. O Índice de Velocidade de Vendas (IVV) da cidade gira em torno de <strong>10% ao mês</strong>. Na prática, isso significa que se não houvesse mais nenhum lançamento, todo o estoque de imóveis disponíveis se esgotaria em apenas 10 meses. É uma das maiores liquidez do mercado imobiliário brasileiro — e liquidez, como todo investidor sabe, é o que transforma patrimônio em segurança.</p>
+
+<p>O perfil de quem compra em Goiânia revela tudo. Levantamentos recentes mostram que mais de <strong>90% das unidades</strong> de determinados empreendimentos de alto padrão foram adquiridas por investidores, não moradores. Desses, 53% vivem fora de Goiânia e 9% moram fora do Brasil. Quando investidores de São Paulo, do exterior e de outros estados direcionam seu capital para cá, é porque os números fazem sentido.</p>
+
+<div class="art-highlight">
+<p>E aqui está a oportunidade que muitos ainda não perceberam: o metro quadrado de Goiânia, mesmo em franca valorização, ainda é <strong>significativamente mais barato</strong> que o de São Paulo, Rio de Janeiro e Brasília. Essa diferença é margem de valorização futura — e ela está diminuindo a cada trimestre.</p>
+</div>
+
+<p>O cenário ficou ainda mais favorável com a ampliação do teto do SFH para <strong>R$ 2,25 milhões</strong>, permitindo que imóveis de alto padrão acessem juros regulados e FGTS. A Caixa oferece taxas a partir de 10,26% ao ano — abaixo da Selic, criando o que especialistas chamam de "arbitragem imobiliária": é mais vantajoso financiar o imóvel do que esperar os juros caírem, porque a valorização do bem supera o custo do financiamento.</p>
+
+<p>O futuro reforça a tese. O <strong>MotoGP</strong> tem contrato até 2030, garantindo visibilidade global contínua. A <strong>praia artificial com ondas</strong> da Flamboyant Urbanismo, projetada pelo escritório Foster + Partners com tecnologia Wavegarden, criará um novo polo de valorização junto ao Autódromo. E o reconhecimento de Goiânia como <strong>"Cidade Árvore do Mundo"</strong> consolida um diferencial de qualidade de vida que atrai moradores e investidores permanentemente.</p>
+
+<p>Em um país onde a maioria dos investimentos mal acompanha a inflação, Goiânia oferece algo raro: <strong>crescimento real, consistente e com fundamentos sólidos</strong>. A pergunta não é se vale a pena investir aqui. A pergunta é quanto tempo você ainda vai esperar.</p>
+
+<div class="art-divider"></div>
+<p class="art-sources"><strong>Fontes:</strong> Ademi-GO (2024-2025), FipeZap, Datazap, Ávolli Incorporadora, Resolução CMN 5.255/2025, Flamboyant Urbanismo / Foster + Partners / Wavegarden.</p></div>
 </div></div>
 <div id="art3" class="article-page" style="display:none"><div class="main">
 <div class="dback" onclick="closeArticle('art3')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
 <div class="art-full-tag">Bairros</div>
 <h1 class="art-full-title">Os setores mais valorizados de Goiânia em 2026</h1>
-<div class="art-full-body"><p>A valorização imobiliária em Goiânia não acontece de forma uniforme. Regiões com infraestrutura consolidada, hospitais de referência, universidades e ampla oferta de serviços concentram as maiores altas — e entender esse mapa é essencial para quem busca investir.</p>
-<p>O <strong>Setor Marista</strong> permanece como o bairro mais valorizado, com metro quadrado acima de <strong>R$ 10.949</strong> e valorização anual de 10,1%. A região é polo de lançamentos de alto padrão, concentra clínicas renomadas, restaurantes premiados e está próxima ao Hospital Albert Einstein — primeira unidade fora de São Paulo. O <strong>Setor Sul</strong> surpreende com alta de <strong>17,3%</strong> no último ano (R$ 10.308/m²), e o <strong>Jardim Goiás</strong> segue como endereço de luxo com R$ 9.546/m², impulsionado pela proximidade com o Parque e Shopping Flamboyant.</p>
-<p>O <strong>Setor Bueno</strong>, com o Parque Vaca Brava e ampla rede de serviços, e o <strong>Setor Oeste</strong>, com o Zoológico, Lago das Rosas e vida cultural ativa, mantêm posições consolidadas entre os mais procurados da cidade.</p>
-<p>Entre as surpresas, o <strong>Setor Central</strong> registrou valorização de <strong>quase 39%</strong>, e a <strong>região Sudoeste</strong> apresentou a maior alta média: <strong>11,7%</strong>, segundo levantamento da Datazap. Bairros como Parque Oeste Industrial tiveram crescimento de 83% no número de domicílios entre os censos de 2010 e 2022. As regiões Norte, Noroeste e Aparecida de Goiânia (3º maior PIB de Goiás, com R$ 20,8 bilhões) também despontam como polos de expansão.</p>
-<p>Para investidores, a regra de ouro é simples: regiões com novos empreendimentos de saúde, educação e infraestrutura viária tendem a ter valorização acelerada nos próximos anos.</p>
-<p style="font-size:12px;color:var(--text-dim);margin-top:24px;padding-top:16px;border-top:1px solid var(--border)"><strong>Fontes:</strong> Datazap (Dez/2025), FipeZap, Índice de Progresso Social (IPS Brasil 2025), IBGE (Censos 2010 e 2022), Secovi Goiás / Portal 62 Imóveis.</p></div>
+<div class="art-full-body"><p>Nem toda valorização imobiliária é igual. Em Goiânia, o mapa da oportunidade tem endereços bem definidos — e entender quais regiões lideram esse movimento é a diferença entre um bom investimento e um investimento extraordinário.</p>
+
+<p>O <strong>Setor Marista</strong> reina absoluto como o bairro mais caro da cidade, com metro quadrado acima de R$ 10.949 e valorização anual de 10,1%. Não é por acaso. A região concentra o que há de mais sofisticado em Goiânia: lançamentos de alto padrão, restaurantes premiados, clínicas renomadas e, talvez o maior diferencial, a presença do <strong>Hospital Albert Einstein</strong> — a instituição de saúde mais respeitada do Brasil, que escolheu Goiânia para sua primeira unidade fora de São Paulo. Quando o Einstein chega, a valorização acompanha.</p>
+
+<p>A grande surpresa do último ano é o <strong>Setor Sul</strong>, que disparou com uma valorização de <strong>17,3%</strong>, alcançando R$ 10.308 por metro quadrado. O bairro combina charme de ruas arborizadas com proximidade do centro e uma vida de bairro que atrai cada vez mais jovens profissionais e famílias. O <strong>Jardim Goiás</strong>, com R$ 9.546/m², segue como endereço de luxo, impulsionado pelo Parque Flamboyant e pelo Shopping Flamboyant — e agora pela proximidade com o Autódromo modernizado e o futuro complexo da praia artificial.</p>
+
+<div class="art-stat-row">
+<div class="art-stat"><span class="art-stat-num">+39%</span><span class="art-stat-label">Setor Central</span></div>
+<div class="art-stat"><span class="art-stat-num">+17,3%</span><span class="art-stat-label">Setor Sul</span></div>
+<div class="art-stat"><span class="art-stat-num">+11,7%</span><span class="art-stat-label">Região Sudoeste</span></div>
+</div>
+
+<p>O <strong>Setor Bueno</strong> e o <strong>Setor Oeste</strong> são os clássicos que nunca decepcionam. O Bueno, com o icônico Parque Vaca Brava e uma rede de serviços incomparável, é onde moradia e investimento se encontram naturalmente. O Oeste, com o Zoológico, o Lago das Rosas e uma vida cultural pulsante, tem um charme que se traduz em valorização constante.</p>
+
+<p>Mas talvez as maiores oportunidades estejam onde poucos estão olhando. O <strong>Setor Central</strong> registrou valorização de quase 39% — um número que desafia qualquer investimento tradicional. A <strong>região Sudoeste</strong> liderou com 11,7% de alta média, e bairros como o Parque Oeste Industrial tiveram crescimento de 83% no número de domicílios entre 2010 e 2022. <strong>Aparecida de Goiânia</strong>, com PIB de R$ 20,8 bilhões (3º maior de Goiás), se consolida como polo logístico e industrial com enorme potencial de expansão.</p>
+
+<p>A regra é simples: onde chegam saúde de qualidade, infraestrutura viária e novos empreendimentos de lazer, a valorização segue. E em Goiânia, esses fatores estão se espalhando pela cidade inteira.</p>
+
+<div class="art-divider"></div>
+<p class="art-sources"><strong>Fontes:</strong> Datazap (Dez/2025), FipeZap, IPS Brasil 2025, IBGE (Censos 2010/2022), Secovi Goiás / Portal 62 Imóveis.</p></div>
 </div></div>
 <div id="art4" class="article-page" style="display:none"><div class="main">
 <div class="dback" onclick="closeArticle('art4')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
 <div class="art-full-tag">Qualidade de Vida</div>
 <h1 class="art-full-title">Qualidade de vida em Goiânia: saúde, segurança e lazer</h1>
-<div class="art-full-body"><p>Goiânia conquistou a <strong>6ª posição entre as capitais brasileiras</strong> no Índice de Progresso Social (IPS), sendo classificada como cidade de "alto progresso social". A capital lidera indicadores no Centro-Oeste em saneamento (92 pontos), moradia (94,84 pontos) e acesso ao ensino superior — superando inclusive Brasília nesse quesito.</p>
-<p>Na saúde, a cidade conta com infraestrutura de referência nacional. O <strong>Hospital Israelita Albert Einstein</strong> — o mais renomado do Brasil — instalou em Goiânia sua <strong>primeira unidade fora de São Paulo</strong>, com 220 leitos, centro de inovação e hub de pesquisa. Além disso, o Einstein assumiu a gestão do HUGO (Hospital de Urgências de Goiás), com investimento de R$ 100 milhões na modernização. A cidade também inaugurou o <strong>CORA</strong> (Complexo Oncológico de Referência do Estado), com R$ 255 milhões em investimentos. Somam-se a isso o Hospital das Clínicas da UFG, Hospital Araújo Jorge e dezenas de clínicas especializadas.</p>
-<p>Na segurança, a transformação é impressionante. Os <strong>roubos a transeuntes caíram 92%</strong> entre 2018 e 2025. Roubos a comércio reduziram 92%, roubos a residências caíram 85%, e roubos de carga tiveram queda de 98%. A cidade saiu da 21ª posição entre as mais violentas do país (2013) para se tornar uma das capitais mais seguras do Brasil.</p>
-<p>Com mais de <strong>50 parques, 1.300 praças</strong> e 89,3% dos domicílios em vias arborizadas (IBGE), Goiânia é uma das cidades com maior área verde por habitante do país. Os parques Flamboyant, Vaca Brava, Areião e Bosque dos Buritis são símbolos dessa identidade. O IDHM é de <strong>0,799</strong> (alto), e a UFG e PUC Goiás são referências em ensino e pesquisa. O custo de vida é mais acessível que em outras capitais, permitindo alto padrão de vida com menor investimento.</p>
-<p>A projeção internacional da cidade ganhou novo impulso com o <strong>MotoGP 2026</strong> — público de 148 mil pessoas, transmissão para 200 países, impacto de R$ 868 milhões na economia e contrato garantido até 2030. O Autódromo recebeu R$ 250 milhões em modernização e é considerado um dos mais modernos da América Latina.</p>
-<p>E o futuro promete ainda mais. A <strong>Flamboyant Urbanismo</strong> anunciou a construção de uma <strong>praia artificial com ondas para surf</strong> em frente ao Autódromo, com projeto assinado pelo escritório britânico <strong>Foster + Partners</strong> e tecnologia da espanhola <strong>Wavegarden</strong>. O megacomplexo incluirá hotel internacional, residências de luxo e mall gastronômico — um empreendimento inédito que vai transformar o conceito de lazer na capital. Goiânia também foi reconhecida como <strong>"Cidade Árvore do Mundo"</strong>, consolidando sua identidade verde.</p>
-<p>Com saúde de referência mundial (Einstein), segurança em transformação, 70+ parques, eventos internacionais (MotoGP até 2030), uma praia artificial com ondas e custo de vida competitivo, Goiânia oferece hoje uma <strong>combinação rara de qualidade de vida, infraestrutura e valorização</strong> que poucas capitais brasileiras conseguem igualar.</p>
-<p style="font-size:12px;color:var(--text-dim);margin-top:24px;padding-top:16px;border-top:1px solid var(--border)"><strong>Fontes:</strong> IPS Brasil 2025, SSP-GO, IBGE (Censo 2022), Hospital Albert Einstein, Governo de Goiás, Instituto Mauro Borges, PNUD (IDHM), Flamboyant Urbanismo / Foster + Partners / Wavegarden.</p></div>
+<div class="art-full-body"><p>Existe uma pergunta que todo investidor deveria fazer antes de comprar um imóvel: <strong>"Eu moraria aqui?"</strong> Porque quando a qualidade de vida de uma cidade é genuinamente alta, a valorização vem como consequência natural. E Goiânia tem dado motivos de sobra para que a resposta seja sim.</p>
+
+<p>A capital goiana conquistou a <strong>6ª posição entre as capitais brasileiras</strong> no Índice de Progresso Social, entrando no seleto grupo de "alto progresso social". Lidera o Centro-Oeste em saneamento, moradia e acesso ao ensino superior — superando inclusive Brasília neste último quesito. O IDHM de 0,799 reflete o que os números mostram: uma cidade que entrega educação, saúde e renda em padrão elevado.</p>
+
+<p>Na saúde, algo extraordinário aconteceu. O <strong>Hospital Albert Einstein</strong> — o mais renomado do Brasil, referência mundial em medicina baseada em evidências — escolheu Goiânia para sua <strong>primeira unidade fora de São Paulo</strong>. São 220 leitos, centro de inovação, hub de pesquisa e ensino. Não é apenas um hospital: é um ecossistema de saúde de classe mundial implantado no coração do Centro-Oeste. Além disso, o Einstein assumiu a gestão definitiva do HUGO (Hospital de Urgências), com R$ 100 milhões em modernização. A cidade também inaugurou o CORA, complexo oncológico de referência com R$ 255 milhões em investimentos. Some-se o Hospital das Clínicas da UFG e o Araújo Jorge, e Goiânia passa a ter uma rede de saúde que rivaliza com qualquer grande capital.</p>
+
+<div class="art-highlight">
+<p>A transformação na segurança é talvez a história mais impressionante. Em 2013, Goiânia figurava entre as 21 cidades mais violentas do país. Hoje, é uma das capitais mais seguras do Brasil. Os roubos a transeuntes caíram <strong>92%</strong>. Roubos a comércio: <strong>-92%</strong>. A residências: <strong>-85%</strong>. Roubos de carga: <strong>-98%</strong>. São números que representam uma mudança real e estrutural.</p>
+</div>
+
+<p>E Goiânia tem algo que nenhuma outra capital do Centro-Oeste oferece nessa escala: natureza integrada à vida urbana. Com mais de <strong>70 parques</strong>, 1.300 praças e o título de <strong>"Cidade Árvore do Mundo"</strong>, a capital é a segunda mais arborizada do Brasil. Caminhar pelo Flamboyant, correr no Areião ou levar os filhos ao Vaca Brava não é programa de fim de semana — é rotina. E essa rotina tem um valor que impacta diretamente o preço dos imóveis ao redor.</p>
+
+<p>A projeção internacional da cidade entrou em outro patamar. O <strong>MotoGP 2026</strong> levou 148 mil pessoas ao Autódromo, com transmissão para 200 países e R$ 868 milhões de impacto econômico — e o contrato vai até 2030. A <strong>Flamboyant Urbanismo</strong>, em parceria com o escritório britânico <strong>Foster + Partners</strong> e a Wavegarden, anunciou uma <strong>praia artificial com ondas para surf</strong> em frente ao Autódromo: hotel internacional, residências de luxo e mall gastronômico. Um empreendimento que vai reposicionar Goiânia no mapa mundial do turismo e do lazer.</p>
+
+<p>Saúde de referência mundial. Segurança em transformação. Natureza abundante. Eventos internacionais. Praia com ondas no cerrado. E um custo de vida que ainda permite viver com alto padrão pagando menos que em outras capitais. Goiânia oferece hoje uma <strong>combinação que poucas cidades no mundo conseguem igualar</strong> — e quem percebe isso primeiro, investe primeiro.</p>
+
+<div class="art-divider"></div>
+<p class="art-sources"><strong>Fontes:</strong> IPS Brasil 2025 (Social Progress Imperative), SSP-GO, IBGE, Hospital Albert Einstein, Governo de Goiás, Instituto Mauro Borges, PNUD, Flamboyant Urbanismo / Foster + Partners / Wavegarden.</p></div>
 </div></div>
 <div id="art5" class="article-page" style="display:none"><div class="main">
 <div class="dback" onclick="closeArticle('art5')"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar</div>
 <div class="art-full-tag">Guia do Comprador</div>
 <h1 class="art-full-title">Casa ou apartamento? Como escolher seu imóvel ideal em Goiânia</h1>
-<div class="art-full-body"><p>Escolher entre casa e apartamento é uma das decisões mais importantes na compra de um imóvel — e em Goiânia, cada opção tem vantagens claras dependendo do seu perfil e objetivo.</p>
-<p><strong>Casas em condomínios fechados</strong> são ideais para quem prioriza espaço, privacidade e segurança. Em Goiânia, condomínios como Aldeia do Vale, Portal do Sol, Alphaville Flamboyant e Jardins Paris oferecem infraestrutura completa: segurança 24h, áreas de lazer, paisagismo e contato com a natureza. São a escolha de famílias que valorizam piscina, churrasqueira, jardim e garagem ampla. Muitas casas vêm com automação, energia solar e acabamento de alto padrão.</p>
-<p><strong>Apartamentos de alto padrão</strong> oferecem praticidade, localização privilegiada e valorização consistente. Setores como Marista (m² acima de R$ 10.900), Bueno, Oeste e Jardim Goiás concentram empreendimentos com varanda gourmet, academia, rooftop, coworking e piscina. A proximidade com o Hospital Albert Einstein, Shopping Flamboyant e parques como Vaca Brava agrega valor contínuo a esses endereços.</p>
-<p><strong>Para investimento puro</strong>, apartamentos compactos e bem localizados costumam oferecer melhor liquidez e rentabilidade com aluguel — Goiânia foi classificada como o <strong>2º melhor destino do Brasil para investir em imóveis para locação</strong> (Ranking MySide 2025). Já terrenos em regiões de expansão como o Sudoeste (alta de 11,7%) e a região Norte podem apresentar valorização expressiva no médio prazo.</p>
-<p>O momento é favorável para comprar. A valorização contínua (13% ao ano), condições de financiamento com taxas a partir de 10,26% (Caixa), o novo teto SFH de R$ 2,25 milhões e a projeção internacional da cidade com o MotoGP fazem com que cada dia de espera possa significar um preço mais alto. Com a chegada da <strong>praia artificial com ondas para surf</strong> (projeto Foster + Partners e Wavegarden) na região do Autódromo, a cidade ganha um novo polo de lazer e valorização que beneficiará diretamente os imóveis do entorno. O importante é contar com <strong>assessoria especializada</strong> para encontrar o imóvel perfeito para seus objetivos.</p>
-<p style="font-size:12px;color:var(--text-dim);margin-top:24px;padding-top:16px;border-top:1px solid var(--border)"><strong>Fontes:</strong> Ademi-GO, Datazap, Ranking MySide Melhores Cidades para Investir 2025, FipeZap, Resolução CMN 5.255/2025, Hospital Albert Einstein.</p></div>
+<div class="art-full-body"><p>Essa é talvez a decisão mais pessoal na jornada de compra de um imóvel. Não existe resposta certa — existe a resposta certa <strong>para você</strong>. Mas entender o que cada opção oferece em Goiânia pode transformar uma dúvida em clareza.</p>
+
+<p>Se o que você busca é <strong>espaço, privacidade e a sensação de ter seu próprio refúgio</strong>, uma casa em condomínio fechado é provavelmente o caminho. Goiânia tem condomínios que são referência nacional: Aldeia do Vale, Portal do Sol, Alphaville Flamboyant (premiado com o Grand Prix Excellence em Paris) e Jardins Paris oferecem segurança 24 horas, áreas de lazer completas, paisagismo impecável e aquela tranquilidade que só se encontra quando se fecha o portão e o mundo fica lá fora. Para famílias com crianças, para quem sonha com piscina e churrasqueira, para quem valoriza o quintal e o jardim — é difícil superar essa experiência.</p>
+
+<p>Agora, se a sua prioridade é <strong>praticidade, localização privilegiada e valorização consistente</strong>, os apartamentos de alto padrão em Goiânia estão em outro nível. O Setor Marista, com metro quadrado acima de R$ 10.900 e a presença do Hospital Albert Einstein a poucos minutos, oferece empreendimentos com varanda gourmet, academia, rooftop e coworking. O Setor Bueno, com o Parque Vaca Brava na porta, combina vida urbana vibrante com qualidade de vida. O Jardim Goiás, abraçado pelo Flamboyant, é sinônimo de sofisticação. São endereços que não apenas valorizam — eles definem um estilo de vida.</p>
+
+<div class="art-highlight">
+<p>Para quem pensa em <strong>investimento puro</strong>, um dado relevante: Goiânia foi classificada como o <strong>2º melhor destino do Brasil para investir em imóveis para locação</strong>, segundo o Ranking MySide 2025. Apartamentos compactos bem localizados oferecem liquidez alta e rentabilidade consistente. Terrenos na região Sudoeste (que valorizou 11,7%) e na região Norte representam oportunidades de médio prazo com potencial expressivo.</p>
+</div>
+
+<p>E o momento? Talvez o melhor dos últimos anos. A valorização de 13% ao ano significa que cada mês de espera é patrimônio perdido. As taxas de financiamento a partir de 10,26% na Caixa estão abaixo da Selic, e o novo teto SFH de R$ 2,25 milhões abriu as portas do crédito regulado para imóveis de alto padrão. Com a chegada da <strong>praia artificial com ondas</strong> — projeto Foster + Partners e Wavegarden na região do Autódromo — a cidade ganha um novo polo de lazer e valorização que vai beneficiar todo o entorno.</p>
+
+<p>Casa ou apartamento, moradia ou investimento, primeiro imóvel ou upgrade — o importante é dar o passo. E contar com uma <strong>assessoria especializada</strong> que entende o mercado de Goiânia como ninguém, para encontrar exatamente o que você procura.</p>
+
+<div class="art-divider"></div>
+<p class="art-sources"><strong>Fontes:</strong> Ademi-GO, Datazap, Ranking MySide 2025, FipeZap, Resolução CMN 5.255/2025, Flamboyant Urbanismo / Foster + Partners / Wavegarden.</p></div>
 </div></div>
 
 <footer class="footer"><div class="footer-inner"><div class="footer-grid">
-<div><img src="data:image/png;base64,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" alt="Exclusive Gyn" style="height:40px;width:auto;margin-bottom:14px;filter:brightness(1)" class="footer-logo"><p class="footer-desc">Especialistas em imóveis de alto padrão em Goiânia e região.</p></div>
+<div><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAA8CAYAAAA9vgdnAAABAGlDQ1BpY2MAABiVY2BgPMEABCwGDAy5eSVFQe5OChGRUQrsDxgYgRAMEpOLCxhwA6Cqb9cgai/r4lGHC3CmpBYnA+kPQKxSBLQcaKQIkC2SDmFrgNhJELYNiF1eUlACZAeA2EUhQc5AdgqQrZGOxE5CYicXFIHU9wDZNrk5pckIdzPwpOaFBgNpDiCWYShmCGJwZ3AC+R+iJH8RA4PFVwYG5gkIsaSZDAzbWxkYJG4hxFQWMDDwtzAwbDuPEEOESUFiUSJYiAWImdLSGBg+LWdg4I1kYBC+wMDAFQ0LCBxuUwC7zZ0hHwjTGXIYUoEingx5DMkMekCWEYMBgyGDGQCm1j8/yRb+6wAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QA/wD/AP+gvaeTAAAAB3RJTUUH6gMSCyUHvHndJQAAHQ9JREFUaN7lm3ecVdW1x3/7lHvP7WV6r8wMMAXIwCC9CQhBioAtakyiEZGY+MSnokEFe4vGAgqoRFGjgAgIDL0Mvc3AADNM73Pnztx7584tp+73BwFjoiYh4DPv7c/n/nPOLmt/91pr77XXuQT/T8prr70KRVGMAHNHZWXlhqVLlzb+bR3m/wOIO+/8OWpqarnk5KRboqMjWyMiIpq/rd7/eRjDhg3Fe++9T8aNGzdbEIzpfn/3ZpfLpV0xGCzLgmXZHz2IrKwM7N27D+vXf3GtzWaZ2djY9K4gCOFly5Z9+7wuZ5ABAwaQpqYmMAyDXbt2/WhhfPDB+zhz5kz/5OSk57q7fa+lpmYcmTLl+u+sTy5nkFtvvZXPyMgokiS5vH//PM+NN97yowPxyScfoqvLkzpixIj3enoCu++9d84ig8GolpQc+M42l2UmVqtVsVqtUnZ25t09PT2OVR99+KMC8cILz6KiojJyyJChrxNCgrt27Xxt1KiR3wvismGIokg//PC9I1FRkQ05Ob1/7/X5YtauXfWjAPHII/PR0tJinjlz5pM2mzWvsrJ6QZ8+vT2vvPL61Rv07rt/iRdffJnfvWv7oiOHS1YtW/bH+H37diM2NuZ/DcTtt9+KMWNH6g4c2LfY5Wrv2b59268opT/M4O+++y6e+P0C29EjJatKy45sWrnyvZStxZuQkBD/g4OYNHkCADD79u38tdvdHqioqFj2yCOPCiNHjvjhhFjy9htYtmxpamnp8SNnz57e+tlnH/dqaW7CqFGj/+2+MzIykJmZCY7jvrdefHw8KKXYsGHdDLe7vbO+vvrE0qVvpS5ZsuSHV8+WliY899wzwzZu+PJs6cmj+9auWd23tbUBQ4YMvuw+U1NTQCmFxWJjeZ7/zl3PZrODUoo1a9YMa2lpqPN6Oz3FxVsm/WDm8fcrEwcA5LEFj0wr3rKptra2+sjnn386iFKKiRPHX1af27YW49VXX8p9/PEF1xoMhu+EUVJSgqVL386rra0uDQS6tWPHDj8xduy1XGxs9L885hU5jre0tGLChInU4/VvPHT4yMsdHa6YQYMKV2zavG7wpk1bMHHidf9Sf088vhDt7e1xeXl5D6SkJLtFUfzWZf74449RVlaWNHbs2D8kJMTlt7W5tm7duvP1oqKBSlub61+exxU7U1dXV2H06FFafV3N2UBPD5OWnjYkJTVtyo4dO88tWrSoprS0FOfOnfuH/cy999cglLEIgv45o9EQWPXxx3+qqKj8u1jitddeQ0dHh3P8+PGvpaenTfH5vE2HDx+5Nz094/xdd911WXO4ooHaCy+8AIPR6G9va3t/zeq1H4kh0Txo0MBlmzZtnPTFF1+Qeb+553vb3zh7JgDwDIdZbrc74+yZc+/HxcUqf1vvvvvmor6+3jRp0qRFGRkZs0RREs+cOfv0jBkzD02cOPGy5b/iUStLRfQryG89eaL0T5u+2ryKZYmhsLBw+fbt22f+8fUl5JZbbvrWdvfddx+8nk5Wr9cPl2Wxb1dXx5bauqrT77yz/JvAbpyFkpISftasWfdnZmb+imVZprGx6dNPPvls5c0330hlWb582a80jKPHyxAMhZGfPagzKPV0d7o7SO8+fX4SGxsz4drxo9semv9I+UsvvUSLi4svtcnLy8fMazMRovb+LMvkU1DO7XYXx8fHN+3ZW3Kp3rhxY7B+/UZm5coVdxYUFCw2my2G1tbW0kOHDs3lOM71yiuv/nsLiatQqqtrkNM7E41Nde2NDY2qTq/ryerVa3BUVPTEqVOndi5Zsqz0hplTtAP7D+H+++9HbEwM/JKQpheEPpIk8kaDwRcIBHZ9tOpTORQOAwAS4qJxsvQUBg8eOLWwsPBVpzPC4fF4fMeOHZs3Y8aMg0OHDv33tRpXqRw/cRxFgwZqgtHcUltTy5lNxlBmr5yBUVFRY3JyMqXly1ccffmV51VXeyfa2tpiJEkcJIZDAb1OJzgjIs7Ikli/e8++C7bMEPi6/Vix4p3hQ4YMWxodHZsgSbJ29uzZV+fNm/fu0qVLtfb29h8vDAA4WVqGoqIiWVFlz/nzNXxKclIgNjZ2UESkY/jAogHSkaPHDoeCkt7hcAyjmtZsEPTmcEhGIBA4VH7mnFRXVw8A+PKLNdi3d3ffUaNHvpuQmJhDNYqmpsbinTt3PcTzfM+mTZuujL/DVS6tbe0YUJAbkGQaKj9dLiUkRZP4+MS8qMiYoRGOaGHfvr0GwjA1qiLHahrUUCjsTctIql6+/AMAwHsrluJ8VXXyxImT3klLzbiGYXi0t7c27t275574+MSqBx988Mo5/6sNo7vbB8Fgwueff+bp138AX1lR2ZaTnWN3RkRlK7Lcq7amelV1TbWoaaqWmJhsIgw51lTXLJaeKsNDDz0EMRywT516/R8yMrOncJwewWBQLCsrWzB16oz1q1Zd2WuDH+Qis66uDtOnz4DNZnUFguHIuvr6aqfDlupyud4o3rp9i9Vqy+Y41q3X6+iRI0ervtywHvfcczfq6hpNP7vtZ4v79On7c0EwMooiobq6etXWrdufkeWw3NDQeEXlJPgBy5w5cxAMBoWYmOjpVFNMjQ0NHxtM1qF6vb6yV6/0cR5PV3FkZHTDxo0b0Nbm4pcseXt+Xl7eE2azhaeUoqGhvnTNmtUzExNTqm688cYrLh/3Q8IIhUJw2q06VZEURVHWma2OpJ6eHnHokCG6cdeOfcjr9eStXLny98XF232bNq+7vXfv7IctFgsPMPB63d7y8tOPPfDA/CpCrs4a/mB5k1//+i6Ew6I+FJZGqio9aTBaAzExMRnhcPho/355N8XFxvbKysqee+utt764bt3qOwoLBz1jt0dYKCUIBoNqVVXNa08//fTmzMyMqybjD2Im102cgOzevRiG8CN6egLBd95558idd94x2mKxtfq7Pb6pU69fNG7c+FuNJoteFEM0HA6LVqtVIISFqiqoqKjYvHLln26pq63x8KwOYAkADYKOB9UYmE1mOOx2tHa4wOt4dPt8UFUFWVmZeOLJxVcXRn5uPkaNGgGWJQgGA5AVBSzDguc52B0OEADnq6rx589WY8GCx7B48SLMm3dfodlssoVCgV2qSpNFMZx/4MCBDWNGj75Fp9d7b7vtjglZWdn3CoJAAIBSCkop3G5X3Z49u26YNevmEzfNni3odHqjrComqqkGQc/zmkoMDodDc9jsYkNLs57juZDP51OopnX1zslyGwQTPF4v9uzZgwOHDl653WTQwEJcc80gZPZKh9PuFGRVjusJBNJEUczUVC2FgkYajUZer9NJ/qCo5ObmwtPZhr1796TLktS7JxDcYTYKYBhmGEOYA4mJKfawKEZzHC+VlZ06nJ2d6bBYzH0YhgAgCIVD2vat2z7cVry9prBwQD+OZXsRMNGyopg0TeUIISzDcjwAg16vM4UlKdFoMDgBmuJ02vMFvdDD83oDKIiro1Oqrqn692FERETgjjvuwKJnXsTuXdviLGbrTwxGUx+OZ62yJImSLPtBSMhkNBKr1RotS3IvRVETREkSeZ4zRkZGDmJZsmPi5Mn+stJTRTzPdb/2+pvnx48fP4zn+dLW1navwSCMbmio/zQlJTnHarWmEMKCEEASQ6SlpfWrrs7OQ/4ef4WqKd16PcfFxcaZ4xOTLBEOJ2M0GFWDwSCxDOOLjYltjXA4W4KhQNBithgsZktMY3PjIH+3p7myqir4b8Ho26c3Jk+eCBDWdPTwgSGKIqVqqlqraThhsRjPh0PhVkVR3SzLugVB3+50Ohvq6xsaQ6JEOY4tNBoNI7s6O7dToK2pvjlaFKX8Lq9vz+TJk5wATfJ4uupMJtOAcDh43Ov1JAWDgQ1JScnXmM2WKJYlJDIyMj4pOTFCb+K2HTl8NFGv0w8A0KmqSiMFOe/1eqodDkcdy7JNiqo26/S6DlES3RRag8FgbDQajbVHjx5MAGhn5fnq7sveWm+7ZTZ4wQhKabRez43UKK2yOyL3BQN+1efvxvsrP0AgEPhGG5vZhInXXSeFe9rqsvoU9lJVdU9mRmp9+ZlKzmHnizjOfvidZe+Gf37Hz4YIgqGZJXQIy5LDhJAWVVXl/fsPJickJM4fPHjw8oiIqBiO40lySvI0vV7H7t21f3VzU9PBiIjIClVV0d7ejtOnT6OsrOx7F3T61MkUFP/whvh7NSM/Px8apTGU0mFU0w5HRsVU+Hw+umLFeygrK8O3XaTMuGE6Pvn0MzJqzPghsiITV3vHAUUGCIMCUKpvaKg6vnbNFw6WYwfqdTqLJEsneZ2hobT0JL78coN7x45tSTXVVdRkMh+KjIwcIwiCnmVZmM227KSkhHxVEbcMHDSw8ciRE9BUBQ6HA70yM5GdlYWMtHSkp6ehIL8AmZmZyEhPQ98+faGqSqZGqavyfJX/smDMmDEDLMvYOIYZLMvKQbPZ1Lp123Zs3Ljxe+mOGTMGhQMKshiWTfF1B3Y67FYlGArZCXCNKIk7cvvmioqiDmUI09vpdOy02+xV+w8ewID+BXjrzT8KBKSvXi84S0oOlmZnZzbb7fZRer2RZRgW0dFRjpiYmMxjx46XVZ2v1vM6PgIgTk3TnACcGtWclFKnXtA7NU11qprm5FjOKStytihJtTW1dZcHIyUlhTOZzcMJQ874u7tb3O5OmIwGpKQkIyM9DVlZvZCdnYWsXpnolZmBjIx05OX2hWAwRLEsWyiKwa2KrIQAgqioiCGqqp73en0t2VnpJrPZ/DO/v+crUZJPNTY1wWI2o6G+CTGxMUWiKHbxetNOu92Wf+jQod3paSkkIiJiEMfrGIbhYHfYU+x267iuzi6X3++3cxxfIAgGURAMNp2Ot/E8bzOZzUUcx0XzPE/MFovNIAhdfr+/qra2Tr0sGMOGDcsJh8MDPF1dnZIkxWqaFquqaqyiKLGU0lgAsQBiNU279I5l2QSLxfxTr8/XEQqGOVVV43Q8n6soSl5zS0uLoigxhDBjNKqRurqG6u7u7kvtnQ57b57ncxoam2sbG+ptDMBERkUNKi0tPRAXF9VLEAz2cDgsSpIoGo2CMTYmkj1y7Pjxbr9f6XR3Vng6u/w9wYA/EAr5CSH2QE+gy93R0eDu6PCHRDHAcjxXU1PTc1kOVBRFtyxJx1mW1WmahovxAMMw3/gBgKZpYBgGlFIEAoGj4VBI4jhOIIRAkuVgKBw+rGkax7Is6eryVLk63BUAdBcPfZRSBIMhvyRKe1RNVQFCvB6fOyIy6hAIlb9Yt35OZmYvPSEELMNA02TIssxwHBcSBEETwxIhFCAcA0IIGEJOsYShOl5HVEaFoNeDMMw/dKDceyuWwuv1IRAI/mXCBF2eLrS0uFxpaamucDiIhoYmEACqpv0l5WeFJImXAOl4HXJz+8BisQKgcLlcaGltu/BOp0OE0wmNaqirrYMgCFA1FZqmQVEUJCUnggBoqG8EQxiwDAuGYWA2m8AwBAzLgud5cCyB0WgE1YBuvwhQgGUZCIKAzMJ0NNQ1osPtRl5+LoLBIBrrm0AIAWEIQAh0Oh73zZ2DN958G2+/+Sqio+NQcb4KmqYClMJksoATRbEoHA4jFApTQggIIYokSU2Vlee7Bhb2yyVQOh9++OHG5JQM9OmdhfIzFbh3zpy4Dre78/PPP5fWrP4ExVt2GHNzcwskUUyQZTkUEeGsBMtWuzu6tBUrVuDtt15P4jhWeOXV16voN5OgZMnS19MYsOTFl/5QA3y9/d32s5udwYA/UHa6XCwtLWNWLH8rB5qaoaqQfL7u05GRUc3vvvseFi9aqE9JSc4oLOxf/+nHn0uZGem9ZUlqOXf2tHvH7n2XBrrz57fzABwA3LKipEuSZAqFQjpN0wgBVEEwdnIjhg8vPnPmzB9Pl5/dT0CgaKoKoFPTKMnJyfx5TEzUgGXLlt9y39xfNcXHp+CpJx7LjY2NGqJR+kFV1Tl8sXZN1vTp1z8cCofbQsHgXlmWVVlRJpgNhmY3sBGANHDggLmaqvamlM4CIP01jKKigQs1BUYAtwC4tFenp6WN4Xnu2PETpXV//mzlbFXRBsuivJZSyimyMqu0tHQLgLPDhw2OSU5N+qC7JzBfkuRDAwv7P6cocs1TixbfD0AFgCcWPgae5/tQjfYF8OefDOj/PMty+orzVW9xLAtFkbVAIKAxVqvFkpiYcMpqtX5ltVm/sttsW8xmc71er5fb2tpeNRhNwtgxIx4+eOAgHwoG7YLBOI5SrViWZXHz5mL76NGj/mAyCaHtO3Y+GREZscnhcBQXFxcvbXe5e/x+vx0AzFaLUTAZLN8WGJpMJpPRZLT+7XOjyaizWKzMDTdMN6WnZvzCIAjreZ7bbbPZttfU1K7yen0MAERFxTIOR4TNZDTp7593b0iUxPUOp3Xywt8/nG42mwAAHV0eRhCEQkVVTgOgZrPDarM5AhPGj//KarV+ZbPZNluslhMMpRokWYbNZIIiSWisr8ezz76AgwdLMGrksPpz5yoXxMRET33yqSduD4ZCUwKBwIHU1MS6FStWoE/vrPFRUdED6usbl8dGR4uTp0zHzBtvQVxsrPzGm29t3bNnTwcAUI1S+h3fCFAKaJr2d+9URYWiyAiFQqrRaOCSkpJubmhsTJh2w2z0H9DPlZqSXA4AhOEopYRqmoZR4yZg//4D61SVBgcVXXO9339h80hPjI8TdHpjd3f3OQAshQaNatSs56AqCjxePx544EEwIAQEJIcCRQAKNU0zXxRoxOhJmDHjph0eb/e7vTJ7PZeSnGB+atEzh9es2XDh6G01D5Rl2VNy4HDDgscXXprI2+8sh8PhQDgcpgDAEhYM/a7bAnqByN/CuOBgyYsvvRKuqKh4w2oxD58xfdrmk8cPPsVzXM6jjy2ExWKFoqpEo5Ro2oXc9IPzF7S6O/1rbTbHjY8+Mj9i4YLHwDHsYJ5Bud3hkABAVUVNVcWobTt2DmYYpogQkgQADCiFpqqaz+sTvV6fFAyGLknW1NiE+fMfUI8eObpDDIue0aNHT3j2mUXWi9MSBIOOUkXq8nb8XXLY6/XC5/P9Uzcq5G92PZvNAkVRIIoSDIJAp02/aU3J/oNT2l0dn5tMxulDhgz64os1H13n93eT8vJyvRgO6y62jY+Lo9VVVasoFSOKigaMPHr0mLG7uye9vq7hxMKFT10YkrCEIUTz+XxiZ2en6PV6VQBgKKVgOfa8Xq87qdfry3ievxR5vf3WG5BEMbmzy5t/7PjJ3wgGIW/UqGH3rlu/kY2KioTfH6jheJ1jQL/+9tEjh3wd4M26AQse+y8sfPK//zL4d18jhYNBhWVZxmQ2Xqqxfv1qMIQQRVW0l194FoufeBxGg6Fy6LAxT679Yt11YTF0LDcv95H331tijI6KkliWVS5qRktrK5YuebsiGAwWJyUl3Jjfr2+hRtCw+MWXPV9bKkMIw3X+dNLEE3q9/qROp2sBAO6CzVK0tnUCHIOY+EQ8+OCDKCkpgSxJpvi4uCker3frHXfeVVlc/OWipMTEp1Z9uPxoWlrm1uaWlk12u/We/gV5E377m3uXPvb4k1BVDampSSgtO5Xj9fl6ADQxDL1oCfSxRx+CLCsgDI9x48drni5fWUKi6bbf/W6e3WG1u2RZwbJlK4SCvLxYVdU8Z89VRBKCKGub/ew9d/8S2dm9murrWj7My++zOCkxTm8UBI1hGO2vafftm6tWV9eu6tunz/vZOVk3nz9//rkJY0f/lZ+6AO4n14zER5+sBeFYzJkzB4yqKiQQCDopEENAYgDEUEptqqJwnZ2d15nM5jPPPvdi5fjxY/HBe39a5ff3bCgo6LfoxImTiTfMvOl8ZWXFI3q97obVq9fOdjocSXabPT4UDI1ISkwa43Q4QxdOrTyhGjXMu29ODIAYADEa1SLffecdtrq6fpXP2910TdGg3wqCkGE0GpKHDRl6s8Fo7HJ3urwOu12Jjooc63Z1DI+Pj4/U6YV4gA6vq63dunlLsa/87DlTMBgyXtQMAFi24gOsWbPhqCRrZ3OyswOffLqusXjHrq8tk/CgGrH8dt79cZTSSzKxkydNDFedr+v0+bqdhGESGIZJEEWRPXP2rIdlWX1lxblDWzZv1tasXYdZs6ar7W0dxxmGpdXV1c3hcKjjhZf+cG7Hjq1HWYbNN5stA3Uc17vb74cky+spUTsPHjyKGdNmSF6vz9Xd7TNIkhSvaWqCrGgRXV3e1p9Ontixe9fuXTqeTzIIxkEEJMcfCLg6XB1rGYbIRsEY9vt7aliOK4iKiBhoNpvye4LBliNHjy+zWoyhsKSqDIuuurq6w2tWr/NcnPBv779Xqa9vqnS5Okqam5s6a2vrLinGtGnTe1ztba66ugajpmnxIEiQJCmeBANuVFfVo6qyDhoD8DwPt9uNNatXIz09FYFAD5av+OAS1U8/+RDjr70WJ0+WYvTY8Zg2dTJmz74Bs2dNx1MLn2O7vV6MmThGPX78JD5bvRFmTsTa9ZtBGIITJ0oRDoegqCoEwYzyM2ewdMkS/NcD8/CLX96BqROnseFwGE8+97S6d+9ePPHk07j73rsQabGhoF8Bjuw/yHV3++jvHn5I3bB+A+Y/9CjWrvkcP51yHbo8XYiJTvqGP9qxbQtYlsHI0dd+43lzYxMMBg47tu2BKElgddw/5+z/2aLTcRg1fAiGDR4IlmUx6dqReOulxwGAzJ97q+Ge237K33L9aIy7pgApUXb4Ws7g0N6tSE9LvRA+sywKemdi9uQRmDyqP1oq9uLUsd2YO+dXF4IolkVhv3z8+eUHsOHNh3E1yhXLtaqqhrqGRjQ0tWDU8CJs3VnCDC7MH37t8KLbjAZ9/1AolN/l8dmphtYWVxchDLnT6/PHffjxZ1UXI9d2dxdJjI3Ia2rtkL09YmxTi+umiorKyrzcAvFUeTla2tphNOjjTp9vdJZV1vuuNIyrkl48euw4+9Zrz9/JMXRKS0PdC10ez6kOt4dXVW2gokjDwpK83RYZbUxOzXz1948/WnemrPSMIvlgNRrSVVUd6fX5lptNxr6ZmRnP2x2Rsc+/8Mbi3r2zlLNnK5GdlhBDKTUAaLjScl+V9OKTjy/IT05J+W9/WF3qtFtLauubun3dPZ3rth3c0u72HO7yB+iu3SUfKJJYnZWRNr++tk7PcTzPcroxPK/fYRB0ofLTZfLRg/s/dVrNt82dc/utZ89WEp7nIcoSDcvSVfn896poRmJiwniW1SmHDh068uX6LQiLIgBg1NCBlFLNlyoBOTlZ3WdOn3o2Jyd75c233Xrdjk1r2wQd111yuOJcbWMDbkuMJzUVp1bHxieejYmJfPKh382riYuO2OtpLMfVyopeFc3QKE1XZMlzprw8cBEEAPA6Xm9zOJyiKDGLnn4RjzzxzP42t/ujyMiIpzi9aYTL1bElMy1W+8uplVjMBvx57Zolbpd7W6+MtJcrq2pTZSmkyZL0HwRD1TpUqpnik5L0f/18zKhRI6ZPm7Z89KhhNgAo+kmu2tLY9IHRINjzCvq1OR0W79Y9hy+AYzlKCEcS4+JCBw4eeYzhdb7cvNwXahta7B2uVvofA6O93bVXU9SIAQUDsh78za9hNRuRmhAFi8XhcDojs51Ouw4ADh07jaTYCC+lmk/TtPCaTV//bYplGLAMwSeff4XUlJS206dPPcgytG//a8Y8bLRGsf8xMDZv3rK3o71tdXJ81FyGIXFrlz6PuuYOokhBa4/fF3B1dF6KcmUpTDRZYlRZJpL8dfCrymGiyhdM7LlX/ohXXl9SWl9T+0h8cmr/vkUjrP8xDjQyMiK4e8/uhb1zsucSqE9/+tXWU7+YdR3XUF+b3tHZ9WzZqXLvxbrNzS0aZfj6nkDI89d9dHr8QZaQSxpgtZjg7wlu/N19dzyvqErgasj9P5ww54E/YhcuAAAAHnRFWHRpY2M6Y29weXJpZ2h0AEdvb2dsZSBJbmMuIDIwMTasCzM4AAAAFHRFWHRpY2M6ZGVzY3JpcHRpb24Ac1JHQrqQcwcAAAAASUVORK5CYII=" alt="Exclusive Gyn" style="height:40px;width:auto;margin-bottom:13px;filter:brightness(1)" class="footer-logo"><p class="footer-desc">Especialistas em imóveis de alto padrão em Goiânia e região.</p></div>
 <div><h5>Contato</h5><a href="https://wa.me/message/7CYPPSIIVHV7E1" target="_blank" rel="noopener">(62) 99824-0125</a><a><span class="__cf_email__" data-cfemail="4d2e2223392c39220d28352e21383e243b282a3423632e2220632f3f">[email&#160;protected]</span></a><a>@exclusivegyn</a></div>
 <div><h5>Informações</h5><a>CRECI 00000</a><a>Goiânia, GO</a></div>
 </div><div class="footer-bot">© 2026 EXCLUSIVE GYN. Todos os direitos reservados.</div></div></footer>
@@ -751,7 +825,7 @@ if(m.bn>0){st+='<div class="dst"><svg width="28" height="28" viewBox="0 0 24 24"
 st+='<div class="dst"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-dim)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><text x="12" y="14.5" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="700" fill="var(--text-dim)" stroke="none">m²</text></svg><div class="dst-v">'+m.a+'</div><div class="dst-l">Área útil</div></div>';sc++;
 if(m.v>0){st+='<div class="dst"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-dim)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14a2 2 0 002-2v-2a2 2 0 00-1.5-1.94L18 7.5A2 2 0 0016.1 6H7.9A2 2 0 006 7.5L4.5 11.06A2 2 0 003 13v2a2 2 0 002 2z"/><circle cx="7.5" cy="17" r="1.5"/><circle cx="16.5" cy="17" r="1.5"/><path d="M5 11h14"/></svg><div class="dst-v">'+m.v+'</div><div class="dst-l">'+(m.v===1?'Vaga de garagem':'Vagas de garagem')+'</div></div>';sc++}
 var tg='';m.cr.forEach(function(c){tg+='<span>'+c+'</span>'});
-var ai='';if(m.tr)ai='<div class="dsection"><div class="dstitle">Áreas</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:14px"><div style="background:var(--bg-card);border-radius:var(--radius);padding:20px;border:1px solid var(--border)"><div style="font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px">Área útil</div><div style="font-size:26px;font-weight:600;color:var(--text)">'+m.a+' m²</div></div><div style="background:var(--bg-card);border-radius:var(--radius);padding:20px;border:1px solid var(--border)"><div style="font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:2px;margin-bottom:6px">Terreno</div><div style="font-size:26px;font-weight:600;color:var(--text)">'+m.tr+' m²</div></div></div></div>';
+var ai='';if(m.tr)ai='<div class="dsection"><div class="dstitle">Áreas</div><div style="display:grid;grid-template-columns:1fr 1fr;gap:13px"><div style="background:var(--bg-card);border-radius:var(--radius);padding:21px;border:1px solid var(--border)"><div style="font-size:13px;color:var(--text-dim);text-transform:uppercase;letter-spacing:2.1px;margin-bottom:6px">Área útil</div><div style="font-size:26px;font-weight:600;color:var(--text)">'+m.a+' m²</div></div><div style="background:var(--bg-card);border-radius:var(--radius);padding:21px;border:1px solid var(--border)"><div style="font-size:13px;color:var(--text-dim);text-transform:uppercase;letter-spacing:2.1px;margin-bottom:6px">Terreno</div><div style="font-size:26px;font-weight:600;color:var(--text)">'+m.tr+' m²</div></div></div></div>';
 var val=m.p;
 var galHTML='';
 if(m.imgs&&m.imgs.length){
@@ -761,7 +835,7 @@ galHTML+='</div></div>';
 }else{
 galHTML='<div class="dgallery" style="background:linear-gradient(135deg,'+m.g1+','+m.g2+')"><svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="rgba(201,168,76,.12)" stroke-width="1"><rect x="2" y="6" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2"/><path d="M22 20L17 14 13 18 9 13 2 20"/></svg></div>';
 }
-dc.innerHTML='<div class="dback" onclick="showList()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar ao catálogo</div>'+galHTML+'<div class="dbadges"><span style="background:'+XB[m.st]+'">'+XT[m.st]+'</span>'+(m.sl?'<span style="background:'+(m.sl==='novo'?'var(--emerald)':m.sl==='oportunidade'?'var(--gold)':'#3a6bcc')+'">'+ST[m.sl]+'</span>':'')+'</div><div class="dheader"><div><div class="dmeta">'+TL[m.t]+' · '+m.b+' · Goiânia</div><h1 class="dtitle">'+m.tt+'</h1><div class="daddr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>'+m.e+'</div></div><div class="dprice-box"><div class="dprice-lbl">Venda</div><div class="dprice">'+fmt(m.p)+'</div>'+(m.a?'<div class="dpm2">'+fm2(m.p,m.a)+'</div>':'')+'<button class="sim-scroll-btn" onclick="document.getElementById(\'simSection\').scrollIntoView({behavior:\'smooth\'})"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M5 12l7 7 7-7"/></svg> Simular financiamento</button></div></div><div class="dstats" style="grid-template-columns:repeat('+sc+',1fr)">'+st+'</div><div class="dsection"><div class="dstitle">Sobre o imóvel</div><p class="ddesc">'+m.ds+'</p></div><div class="dsection"><div class="dstitle">Características</div><div class="dtags">'+tg+'</div></div>'+ai+'<div class="dmap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-dim)" stroke-width="1.5" style="opacity:.4"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><p style="font-size:14px;color:var(--text-dim);margin-top:8px">'+m.b+', Goiânia</p></div><div class="dcta"><div><h3>Gostou deste imóvel?</h3><p>Agende uma visita pelo WhatsApp</p></div><a href="javascript:void(0)" onclick="enviarWhatsImovel()" class="wbtn" style="text-decoration:none;cursor:pointer" ><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Agendar visita</a></div><div class="sim-section" id="simSection"><div class="sim-wrap"><h3 class="sim-title">Simule seu financiamento</h3><p class="sim-sub">Inclui seguros MIP/DFI, taxa de administração e análise de renda | Taxas de março/2026</p><div class="sim-grid"><div class="sim-field"><label>Valor do imóvel (R$)</label><input type="text" id="simVal" value="'+val.toLocaleString("pt-BR")+'" oninput="fmtMoney(this)"/></div><div class="sim-field"><label>Valor da entrada (R$)</label><input type="text" id="simEnt" placeholder="0" oninput="fmtMoney(this)"/></div><div class="sim-field"><label>Banco</label><select id="simBanco" onchange="updateTaxa()"><option value="">Selecionar banco</option><option value="caixa">Caixa Econômica</option><option value="itau">Itaú</option><option value="bradesco">Bradesco</option><option value="santander">Santander</option><option value="bb">Banco do Brasil</option></select></div><div class="sim-field"><label>Taxa de juros</label><div id="simTaxa" style="padding:12px 14px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--gold);font-weight:500">— definida pelo banco —</div></div><div class="sim-field"><label>Prazo (meses)</label><select id="simPrazo"><option value="120">10 anos (120x)</option><option value="180">15 anos (180x)</option><option value="240">20 anos (240x)</option><option value="300">25 anos (300x)</option><option value="360" selected>30 anos (360x)</option><option value="420">35 anos (420x)</option></select></div><div class="sim-field"><label>Sistema</label><select id="simSistema"><option value="sac">SAC (parcela decrescente)</option><option value="price">Price (parcela fixa)</option></select></div><div class="sim-field"><label>Sua renda mensal (R$)</label><input type="text" id="simRenda" placeholder="Opcional" oninput="fmtMoney(this)"/></div><div class="sim-field"><label>Sua idade</label><input type="number" id="simIdade" placeholder="Ex: 35" min="18" max="75"/></div></div><button class="sim-btn" onclick="simularFinanc()">Simular parcelas</button><div id="simResult" class="sim-result"><div class="sim-result-grid"><div class="sim-result-item"><div class="sim-result-label">Primeira parcela</div><div class="sim-result-value" id="simResPrim">-</div></div><div class="sim-result-item"><div class="sim-result-label">Última parcela</div><div class="sim-result-value" id="simResUlt">-</div></div><div class="sim-result-item"><div class="sim-result-label">Total pago</div><div class="sim-result-value" id="simResTotal">-</div></div></div><div class="sim-result-grid" style="margin-top:12px"><div class="sim-result-item"><div class="sim-result-label">Total de juros</div><div class="sim-result-value" id="simResJuros" style="font-size:16px">-</div></div><div class="sim-result-item"><div class="sim-result-label">Seguros + taxas</div><div class="sim-result-value" id="simResSeguros" style="font-size:16px">-</div></div><div class="sim-result-item"><div class="sim-result-label">CET estimado</div><div class="sim-result-value" id="simResCET" style="font-size:16px">-</div></div></div><div id="simCompRow" style="display:none;text-align:center;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1)"><div class="sim-result-label">Comprometimento de renda</div><div class="sim-result-value" id="simResComp" style="font-size:22px;margin-top:4px">-</div></div><p id="simCompAlert" style="display:none;font-size:14px;text-align:center;margin-top:10px;padding:12px 18px;border-radius:8px;line-height:1.5"></p><p class="sim-result-note" id="simResBanco" style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1)"></p><p class="sim-result-note" style="margin-top:8px">* Simulação estimada com seguros MIP/DFI e taxa de administração inclusos. Para valores exatos, consulte o banco.</p></div><p style="font-size:13px;color:var(--text-dim);text-align:center;margin-bottom:12px">Para uma simulação precisa, entre no simulador oficial do seu banco desejado:</p><div class="sim-banks"><a href="'+BANK_RATES.caixa.url+'" target="_blank" class="sim-bank-link">Caixa</a><a href="'+BANK_RATES.itau.url+'" target="_blank" class="sim-bank-link">Itaú</a><a href="'+BANK_RATES.bradesco.url+'" target="_blank" class="sim-bank-link">Bradesco</a><a href="'+BANK_RATES.santander.url+'" target="_blank" class="sim-bank-link">Santander</a><a href="'+BANK_RATES.bb.url+'" target="_blank" class="sim-bank-link">Banco do Brasil</a></div></div></div>';
+dc.innerHTML='<div class="dback" onclick="showList()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Voltar ao catálogo</div>'+galHTML+'<div class="dbadges"><span style="background:'+XB[m.st]+'">'+XT[m.st]+'</span>'+(m.sl?'<span style="background:'+(m.sl==='novo'?'var(--emerald)':m.sl==='oportunidade'?'var(--gold)':'#3a6bcc')+'">'+ST[m.sl]+'</span>':'')+'</div><div class="dheader"><div><div class="dmeta">'+TL[m.t]+' · '+m.b+' · Goiânia</div><h1 class="dtitle">'+m.tt+'</h1><div class="daddr"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>'+m.e+'</div></div><div class="dprice-box"><div class="dprice-lbl">Venda</div><div class="dprice">'+fmt(m.p)+'</div>'+(m.a?'<div class="dpm2">'+fm2(m.p,m.a)+'</div>':'')+'<button class="sim-scroll-btn" onclick="document.getElementById(\'simSection\').scrollIntoView({behavior:\'smooth\'})"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22M5 12l7 7 7-7"/></svg> Simular financiamento</button></div></div><div class="dstats" style="grid-template-columns:repeat('+sc+',1fr)">'+st+'</div><div class="dsection"><div class="dstitle">Sobre o imóvel</div><p class="ddesc">'+m.ds+'</p></div><div class="dsection"><div class="dstitle">Características</div><div class="dtags">'+tg+'</div></div>'+ai+'<div class="dmap"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--text-dim)" stroke-width="1.5" style="opacity:.4"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg><p style="font-size:13px;color:var(--text-dim);margin-top:8px">'+m.b+', Goiânia</p></div><div class="dcta"><div><h3>Gostou deste imóvel?</h3><p>Agende uma visita pelo WhatsApp</p></div><a href="javascript:void(0)" onclick="enviarWhatsImovel()" class="wbtn" style="text-decoration:none;cursor:pointer" ><svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> Agendar visita</a></div><div class="sim-section" id="simSection"><div class="sim-wrap"><h3 class="sim-title">Simule seu financiamento</h3><p class="sim-sub">Inclui seguros MIP/DFI, taxa de administração e análise de renda | Taxas de março/2026</p><div class="sim-grid"><div class="sim-field"><label>Valor do imóvel (R$)</label><input type="text" id="simVal" value="'+val.toLocaleString("pt-BR")+'" oninput="fmtMoney(this)"/></div><div class="sim-field"><label>Valor da entrada (R$)</label><input type="text" id="simEnt" placeholder="0" oninput="fmtMoney(this)"/></div><div class="sim-field"><label>Banco</label><select id="simBanco" onchange="updateTaxa()"><option value="">Selecionar banco</option><option value="caixa">Caixa Econômica</option><option value="itau">Itaú</option><option value="bradesco">Bradesco</option><option value="santander">Santander</option><option value="bb">Banco do Brasil</option></select></div><div class="sim-field"><label>Taxa de juros</label><div id="simTaxa" style="padding:13px 14px;border-radius:var(--radius);border:1px solid var(--border);font-size:16px;color:var(--gold);font-weight:500">— definida pelo banco —</div></div><div class="sim-field"><label>Prazo (meses)</label><select id="simPrazo"><option value="120">10 anos (120x)</option><option value="180">15 anos (180x)</option><option value="240">20 anos (240x)</option><option value="300">25 anos (300x)</option><option value="360" selected>30 anos (360x)</option><option value="420">35 anos (420x)</option></select></div><div class="sim-field"><label>Sistema</label><select id="simSistema"><option value="sac">SAC (parcela decrescente)</option><option value="price">Price (parcela fixa)</option></select></div><div class="sim-field"><label>Sua renda mensal (R$)</label><input type="text" id="simRenda" placeholder="Opcional" oninput="fmtMoney(this)"/></div><div class="sim-field"><label>Sua idade</label><input type="number" id="simIdade" placeholder="Ex: 35" min="18" max="75"/></div></div><button class="sim-btn" onclick="simularFinanc()">Simular parcelas</button><div id="simResult" class="sim-result"><div class="sim-result-grid"><div class="sim-result-item"><div class="sim-result-label">Primeira parcela</div><div class="sim-result-value" id="simResPrim">-</div></div><div class="sim-result-item"><div class="sim-result-label">Última parcela</div><div class="sim-result-value" id="simResUlt">-</div></div><div class="sim-result-item"><div class="sim-result-label">Total pago</div><div class="sim-result-value" id="simResTotal">-</div></div></div><div class="sim-result-grid" style="margin-top:12px"><div class="sim-result-item"><div class="sim-result-label">Total de juros</div><div class="sim-result-value" id="simResJuros" style="font-size:16px">-</div></div><div class="sim-result-item"><div class="sim-result-label">Seguros + taxas</div><div class="sim-result-value" id="simResSeguros" style="font-size:16px">-</div></div><div class="sim-result-item"><div class="sim-result-label">CET estimado</div><div class="sim-result-value" id="simResCET" style="font-size:16px">-</div></div></div><div id="simCompRow" style="display:none;text-align:center;margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1)"><div class="sim-result-label">Comprometimento de renda</div><div class="sim-result-value" id="simResComp" style="font-size:21px;margin-top:4px">-</div></div><p id="simCompAlert" style="display:none;font-size:13px;text-align:center;margin-top:10px;padding:13px 18px;border-radius:8px;line-height:1.5"></p><p class="sim-result-note" id="simResBanco" style="margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.1)"></p><p class="sim-result-note" style="margin-top:8px">* Simulação estimada com seguros MIP/DFI e taxa de administração inclusos. Para valores exatos, consulte o banco.</p></div><p style="font-size:13px;color:var(--text-dim);text-align:center;margin-bottom:13px">Para uma simulação precisa, entre no simulador oficial do seu banco desejado:</p><div class="sim-banks"><a href="'+BANK_RATES.caixa.url+'" target="_blank" class="sim-bank-link">Caixa</a><a href="'+BANK_RATES.itau.url+'" target="_blank" class="sim-bank-link">Itaú</a><a href="'+BANK_RATES.bradesco.url+'" target="_blank" class="sim-bank-link">Bradesco</a><a href="'+BANK_RATES.santander.url+'" target="_blank" class="sim-bank-link">Santander</a><a href="'+BANK_RATES.bb.url+'" target="_blank" class="sim-bank-link">Banco do Brasil</a></div></div></div>';
 window.scrollTo(0,0)}
 function toggleTheme(){document.documentElement.classList.toggle('light');localStorage.setItem('eg-theme',document.documentElement.classList.contains('light')?'light':'dark')}
 
