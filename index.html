@@ -444,7 +444,7 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 .c-dots{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;gap:13px;z-index:10}
 .c-dot{width:36px;height:3px;border-radius:2px;background:rgba(255,255,255,.15);cursor:pointer;transition:all .35s;border:none}
 .c-dot.on{background:var(--gold);width:56px}
-.c-arrows{position:absolute;top:50%;transform:translateY(-50%);width:100%;display:flex;justify-content:space-between;padding:0 24px;z-index:10;pointer-events:none}
+.c-arrows{display:none !important}
 .c-arrow{pointer-events:all;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.05);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);color:var(--text-mid);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .25s}
 .c-arrow:hover{background:rgba(212,160,18,.15);border-color:rgba(212,160,18,.3);color:var(--gold)}
 
@@ -541,6 +541,7 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 .dgal-slide{flex-shrink:0;width:100%;height:auto;object-fit:contain;display:block;pointer-events:none}
 
 .dgallery-thumbs{display:none}
+.gal-arrow,.gal-arrow-l,.gal-arrow-r{display:none !important}
 .gal-counter{position:absolute;top:12px;right:12px;background:rgba(0,0,0,.55);backdrop-filter:blur(6px);border-radius:100px;padding:6px 16px;color:white;font-size:13px;font-weight:500;letter-spacing:1.2px;z-index:2}
 .dgallery-thumbs{display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin;max-width:700px;margin-left:auto;margin-right:auto}
 .dgallery-thumbs::-webkit-scrollbar{height:4px}
@@ -689,7 +690,7 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
   .slide-title{font-size:30px}
   .slide-sub{font-size:16px;margin-bottom:21px}
   .slide-btn{padding:11px 22px;font-size:13px}
-  .c-arrows{padding:0 8px}
+  
   .c-arrow{width:36px;height:36px}
   .slide-decor::before{width:400px;height:400px}
   .slide-decor::after{width:280px;height:38.2vh}
@@ -811,10 +812,11 @@ nav a{font-size:12px;padding:6px 8px}
 .nativ-gallery{position:relative;background:#0d2a1a;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:14px;margin-top:24px}
 .nativ-gal-track{display:flex;transition:transform .4s ease;touch-action:pan-y}
 .nativ-gal-track img{flex-shrink:0;width:100%;aspect-ratio:16/9;object-fit:contain;display:block;pointer-events:none;background:#0d2a1a}
-.nativ-gal-prev,.nativ-gal-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(10,17,23,.7);border:1px solid rgba(255,255,255,.2);color:white;width:48px;height:48px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .3s;backdrop-filter:blur(10px)}
-.nativ-gal-prev{left:16px}
-.nativ-gal-next{right:16px}
-.nativ-gal-prev:hover,.nativ-gal-next:hover{background:rgba(212,160,18,.9);border-color:#e8b923}
+
+
+
+
+.nativ-gal-prev,.nativ-gal-next{display:none}
 .nativ-gal-counter{position:absolute;top:14px;right:14px;background:rgba(10,17,23,.8);color:white;padding:6px 14px;border-radius:100px;font-size:12px;letter-spacing:1px;backdrop-filter:blur(10px)}
 .nativ-thumbs{display:none}
 .nativ-thumbs::-webkit-scrollbar{height:6px}
@@ -903,9 +905,9 @@ nav a{font-size:12px;padding:6px 8px}
 .nativ-invest-range span{font-size:16px}
 .launch-banner{padding:56px 20px 48px}
 .launch-grid{grid-template-columns:1fr;gap:20px}
-.nativ-gal-prev,.nativ-gal-next{width:40px;height:40px}
-.nativ-gal-prev{left:8px}
-.nativ-gal-next{right:8px}
+
+
+
 .price-lightbox-prev{left:8px;width:44px;height:44px}
 .price-lightbox-next{right:8px;width:44px;height:44px}
 .price-lightbox-close{top:12px;right:12px}
@@ -2133,7 +2135,7 @@ else if(p==='/nativ')showNativ(true);
 else if(p==='/sobre')showAbout(true);
 else if(p==='/sob-medida')showIdeal(true);
 else if(p==='/privacidade'){if(typeof showPrivacy==='function')showPrivacy(true)}
-else if(p.indexOf('/imovel/')===0){var slug=p.replace('/imovel/','');var found=null;for(var i=0;i<PROPS.length;i++){if(slugify(PROPS[i].tt)===slug){found=PROPS[i];break}}if(found)showD(found.id,true);else showList(true)}
+else if(p.indexOf('/imovel/')===0){var slug=p.replace('/imovel/','');var found=null;for(var i=0;i<D.length;i++){if(slugify(D[i].tt)===slug){found=D[i];break}}if(found)showD(found.id,true);else showList(true)}
 else if(p.indexOf('/artigo/')===0){var aslug=p.replace('/artigo/','');if(ART_IDS[aslug])showArticle(ART_IDS[aslug],true);else showList(true)}
 else showList(true);
 }
