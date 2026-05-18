@@ -354,14 +354,14 @@ var SEO_DATA={
     description:'Curadoria de imóveis de alto padrão em Goiânia. Corretor em Goiânia especializado em investimento imobiliário. Imóveis em Goiânia com valorização de 13,4% em 2025. 3º maior mercado imobiliário do Brasil.',
     keywords:'imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, imobiliária goiânia, apartamento goiânia, casa goiânia, investimento imobiliário goiânia, imóveis alto padrão goiânia, comprar imóvel goiânia',
     url:'https://exclusivegyn.com.br',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   },
   lancamentos:{
     title:'Lançamentos Imobiliários em Goiânia 2026 | Exclusive Gyn — Corretor Goiânia',
     description:'Lançamentos imobiliários exclusivos em Goiânia. Oportunidades de pré-lançamento para investidores. Imóveis em Goiânia com alto potencial de valorização. Corretor em Goiânia especializado.',
     keywords:'lançamentos imobiliários goiânia, lançamento goiânia 2026, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, pré-lançamento goiânia, investimento imobiliário goiânia, apartamento goiânia lançamento',
     url:'https://exclusivegyn.com.br/lancamentos',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   },
   nativ:{
     title:'NATIV Parque Areião | Lançamento em Goiânia — Studios e Apartamentos | Exclusive Gyn',
@@ -375,63 +375,63 @@ var SEO_DATA={
     description:'Exclusive Gyn: curadoria de imóveis de alto padrão em Goiânia. Corretores seniores Eduardo Rodrigues e Murilo Occhiena. Imóveis em Goiânia selecionados com critério. Seu corretor em Goiânia.',
     keywords:'corretor goiania, corretor em goiânia, imobiliária goiânia, imóveis em goiânia, imovel em goiania, exclusive gyn, corretor de imóveis goiânia, imóveis alto padrão goiânia',
     url:'https://exclusivegyn.com.br/sobre',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   },
   sobmedida:{
     title:'Imóvel Sob Medida em Goiânia | Encontre o Imóvel Ideal | Exclusive Gyn',
     description:'Encontre o imóvel ideal em Goiânia. Atendimento personalizado com corretor em Goiânia especializado em alto padrão. Imóveis em Goiânia selecionados conforme seu perfil de investimento.',
     keywords:'imóvel sob medida goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, comprar imóvel goiânia, apartamento goiânia, casa goiânia, investimento imobiliário',
     url:'https://exclusivegyn.com.br/sob-medida',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   },
   privacidade:{
     title:'Política de Privacidade | Exclusive Gyn — Imóveis em Goiânia',
     description:'Política de privacidade e proteção de dados da Exclusive Gyn. Transparência no tratamento de dados conforme LGPD.',
     keywords:'política de privacidade, LGPD, exclusive gyn, imóveis goiânia',
     url:'https://exclusivegyn.com.br/privacidade',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   },
   art1:{
     title:'Goiânia: 3º Maior Mercado Imobiliário do Brasil | Exclusive Gyn',
     description:'Goiânia é o 3º maior mercado imobiliário do Brasil com R$ 8,1 bilhões em vendas. Descubra por que imóveis em Goiânia são o investimento mais inteligente. Corretor em Goiânia.',
     keywords:'mercado imobiliário goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, investimento goiânia, valorização imóveis goiânia',
     url:'https://exclusivegyn.com.br/artigo/goiania-3-maior-mercado-imobiliario',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   },
   art2:{
     title:'Por que Investir em Imóveis em Goiânia é Inteligente | Exclusive Gyn',
     description:'Investir em imóveis em Goiânia: valorização de 13,4% em 2025, alta liquidez e segurança patrimonial. Corretor em Goiânia apresenta os dados. Imovel em Goiania com rentabilidade real.',
     keywords:'investir imóveis goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, rentabilidade imóveis goiânia, valorização goiânia',
     url:'https://exclusivegyn.com.br/artigo/por-que-investir-em-imoveis-em-goiania',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   },
   art3:{
     title:'Setores Mais Valorizados de Goiânia em 2026 | Exclusive Gyn',
     description:'Conheça os setores mais valorizados de Goiânia em 2026. Marista, Bueno, Oeste e mais. Imóveis em Goiânia nos melhores bairros. Corretor em Goiânia especializado.',
     keywords:'setores valorizados goiânia, bairros goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, setor marista, setor bueno, setor oeste',
     url:'https://exclusivegyn.com.br/artigo/setores-mais-valorizados-goiania-2026',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   },
   art4:{
     title:'Qualidade de Vida em Goiânia: Saúde, Segurança e Lazer | Exclusive Gyn',
     description:'Qualidade de vida em Goiânia: Hospital Albert Einstein, redução de 92% na violência, 70 parques. Imóveis em Goiânia em uma cidade que não para de crescer. Corretor em Goiânia.',
     keywords:'qualidade de vida goiânia, morar em goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, segurança goiânia, saúde goiânia',
     url:'https://exclusivegyn.com.br/artigo/qualidade-de-vida-em-goiania',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   },
   art5:{
     title:'Casa ou Apartamento em Goiânia? Como Escolher | Exclusive Gyn',
     description:'Casa ou apartamento em Goiânia? Guia completo para escolher o imóvel ideal. Imóveis em Goiânia para todos os perfis. Corretor em Goiânia orienta sua decisão.',
     keywords:'casa goiânia, apartamento goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, comprar imóvel goiânia, casa ou apartamento',
     url:'https://exclusivegyn.com.br/artigo/casa-ou-apartamento-imovel-ideal-goiania',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   },
   art6:{
     title:'Goiânia Cidade Inteligente: Megaprojetos que Transformam | Exclusive Gyn',
     description:'Megaprojetos em Goiânia: MotoGP, Foster + Partners, Albert Einstein, Pininfarina. Imóveis em Goiânia valorizando com infraestrutura de classe mundial. Corretor em Goiânia.',
     keywords:'megaprojetos goiânia, cidade inteligente goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, motogp goiânia, foster partners goiânia',
     url:'https://exclusivegyn.com.br/artigo/goiania-cidade-inteligente-megaprojetos',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
   }
 };
 
@@ -487,3 +487,57 @@ function closePlantLightboxBg(e){if(e.target.id==='plantLightbox')closePlantLigh
 function updatePlantLightbox(){document.getElementById('plantLightboxImg').src=NATIV_PLANTS[plantIdx];document.getElementById('plantLightboxCounter').textContent=(plantIdx+1)+' / '+NATIV_PLANTS.length}
 function plantPrev(){plantIdx=(plantIdx-1+NATIV_PLANTS.length)%NATIV_PLANTS.length;updatePlantLightbox()}
 function plantNext(){plantIdx=(plantIdx+1)%NATIV_PLANTS.length;updatePlantLightbox()}
+
+
+/* ========================================
+   MELHORIAS DE PROFISSIONALISMO
+   ======================================== */
+
+/* 1. TEMA: inicialização movida para index.html (inline no <head>) */
+
+/* 2. TECLADO: suporte a teclado já implementado no código original (linha 346) ✅ */
+
+/* 3. CANONICAL: atualiza junto com cada troca de página */
+function updateCanonical(url) {
+  var link = document.querySelector('link[rel="canonical"]');
+  if (link) link.href = url || 'https://exclusivegyn.com.br';
+}
+
+// Intercepta as funções de navegação para atualizar o canonical
+(function() {
+  var origUpdateSEO = updateSEO;
+  updateSEO = function(pageKey, customData) {
+    origUpdateSEO(pageKey, customData);
+    var data = customData || SEO_DATA[pageKey];
+    if (data && data.url) updateCanonical(data.url);
+  };
+})();
+
+/* 4. IMAGENS RESPONSIVAS: serve tamanho menor no mobile */
+(function() {
+  var isMobile = window.innerWidth < 768;
+  if (isMobile) {
+    D.forEach(function(m) {
+      if (m.imgs) {
+        m.imgs = m.imgs.map(function(url) {
+          return url.replace('=s1600', '=s800');
+        });
+      }
+    });
+  }
+})();
+
+/* 5. CARROSSEL: suporte a toque (swipe) nas setas */
+(function(){
+  var wrap = document.getElementById('cWrap');
+  if (!wrap) return;
+  var tsx = 0;
+  wrap.addEventListener('touchstart', function(e) {
+    tsx = e.changedTouches[0].screenX;
+  }, { passive: true });
+  wrap.addEventListener('touchend', function(e) {
+    var diff = tsx - e.changedTouches[0].screenX;
+    if (diff > 50) nextS();
+    if (diff < -50) prevS();
+  }, { passive: true });
+})();
