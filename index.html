@@ -535,8 +535,8 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 .pg-gallery{width:100%;margin-bottom:24px;border-radius:16px;overflow:hidden;background:#0a0a0a}
 /* ── Foto principal ── */
 .pg-main{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;cursor:zoom-in;background:#0a0a0a}
-.pg-track{display:flex;height:100%;transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
-.pg-slide{flex-shrink:0;width:100%;height:100%;object-fit:contain;display:block;user-select:none;pointer-events:none;background:#0a0a0a}
+.pg-track{display:flex;height:100%;width:calc(var(--pg-n,1)*100%);transition:transform .45s cubic-bezier(.4,0,.2,1);will-change:transform}
+.pg-slide{flex:none;width:calc(100%/var(--pg-n,1));height:100%;object-fit:contain;display:block;user-select:none;pointer-events:none;background:#0a0a0a}
 /* ── Contador ── */
 .pg-counter{position:absolute;top:16px;right:16px;z-index:4;background:rgba(0,0,0,.62);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.12);border-radius:30px;padding:5px 14px;color:#fff;font-size:12px;font-weight:500;letter-spacing:1.5px;line-height:1;pointer-events:none}
 /* ── Setas ── */
@@ -1854,7 +1854,7 @@ if(m.imgs&&m.imgs.length){
 var tot=m.imgs.length;
 var pct=tot>1?Math.round(100/tot)+'%':'100%';
 /* ── foto principal ── */
-galHTML='<div class="pg-gallery">';
+galHTML='<div class="pg-gallery" style="--pg-n:'+tot+'">';
 galHTML+='<div class="pg-main" id="propGallery" onclick="pgLightboxOpen(galIdx)">';
 galHTML+='<div class="pg-track" id="pgTrack">';
 for(var gi=0;gi<tot;gi++){galHTML+='<img src="'+m.imgs[gi]+'" class="pg-slide" alt="'+m.tt+' foto '+(gi+1)+'" loading="'+(gi<2?'eager':'lazy')+'" draggable="false"/>';}
@@ -2056,7 +2056,7 @@ function pgGo(n){
   galIdx=n;
   var tot=galImgs.length;
   var track=document.getElementById('pgTrack');
-  if(track)track.style.transform='translateX(-'+(n*100)+'%)';
+  if(track)track.style.transform='translateX(-'+(n*(100/galImgs.length))+'%)';
   var ctr=document.getElementById('pgCounter');
   if(ctr)ctr.textContent=(n+1)+' / '+tot;
   var bar=document.getElementById('pgBar');
