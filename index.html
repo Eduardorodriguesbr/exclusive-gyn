@@ -28,7 +28,7 @@
 <meta property="og:url" content="https://exclusivegyn.com.br">
 <meta property="og:title" content="Exclusive Gyn | Imóveis de Alto Padrão em Goiânia">
 <meta property="og:description" content="Curadoria de imóveis premium em Goiânia. Apartamentos e casas nos setores Marista, Bueno, Oeste e Jardim Goiás. O 3º maior mercado imobiliário do Brasil com valorização consistente (13,4% em 2025).">
-<meta property="og:image" content="https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200">
+<meta property="og:image" content="https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Exclusive Gyn">
 
@@ -36,7 +36,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Exclusive Gyn | Imóveis de Alto Padrão em Goiânia">
 <meta name="twitter:description" content="Curadoria de imóveis premium em Goiânia. Apartamentos e casas nos melhores setores. Simulador de financiamento integrado.">
-<meta name="twitter:image" content="https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200">
+<meta name="twitter:image" content="https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png">
 
 <!-- Schema.org - Organization -->
 <script type="application/ld+json">
@@ -986,6 +986,33 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 }
 
 </style>
+
+<script>
+/* OG tags por imóvel — roda antes do body para crawlers */
+(function(){
+  var OG={
+    'casa-terrea-portal-do-sol-green':{t:'Casa Térrea Portal do Sol Green | R$ 2.590.000 | Exclusive Gyn',d:'Casa térrea de alto padrão no Portal do Sol Green, Goiânia. 4 suítes, piscina privativa, condomínio fechado. Corretor em Goiânia — Exclusive Gyn.',i:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'},
+    'opus-gyro-rooftop-setor-marista':{t:'Opus Gyro Rooftop Setor Marista | R$ 650.000 | Exclusive Gyn',d:'Apartamento Opus Gyro Rooftop no Setor Marista, Goiânia. Rooftop com piscina de borda infinita, 1 suíte, 47m². Corretor em Goiânia.',i:'https://res.cloudinary.com/dvswv9ikn/image/upload/q_auto,f_auto/Murilo_-_Opus_Gyro_Rooftop_-_Marista-1_mbli5k'},
+    'blanc-casa-design-ap-603':{t:'Blanc Casa Design Ap. 603 | R$ 1.350.000 | Exclusive Gyn',d:'Apartamento semimobiliado no Blanc Casa Design, Setor Bueno, Goiânia. 137m², 3 suítes, elevador privativo, arquitetura Triptyque.',i:'https://res.cloudinary.com/dvswv9ikn/image/upload/q_auto,f_auto/IMG_8675_v0amyn'}
+  };
+  var p=window.location.pathname;
+  if(p.indexOf('/imovel/')===0){
+    var slug=p.replace('/imovel/','').replace(/\/$/,'');
+    var d=OG[slug];
+    if(d){
+      document.title=d.t;
+      var metas=document.querySelectorAll('meta');
+      metas.forEach(function(m){
+        var prop=m.getAttribute('property')||m.getAttribute('name')||'';
+        if(prop==='og:title'||prop==='twitter:title')m.setAttribute('content',d.t);
+        if(prop==='og:description'||prop==='twitter:description'||prop==='description')m.setAttribute('content',d.d);
+        if(prop==='og:image'||prop==='twitter:image')m.setAttribute('content',d.i);
+        if(prop==='og:url')m.setAttribute('content',window.location.href);
+      });
+    }
+  }
+})();
+</script>
 </head>
 <body>
 <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0">Imóveis de Alto Padrão em Goiânia - Apartamentos e Casas nos Melhores Setores | Exclusive Gyn</h1>
@@ -1755,6 +1782,47 @@ nav a.on::after{content:'';position:absolute;bottom:-6px;left:0;right:0;height:2
 <a href="https://wa.me/message/7CYPPSIIVHV7E1" target="_blank" rel="noopener" class="wafloat" aria-label="WhatsApp"><svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ── Meta OG tags por imóvel (para anúncios Meta/Facebook) ── */
+(function(){
+  var OG={
+    'casa-terrea-portal-do-sol-green':{
+      title:'Casa Térrea Portal do Sol Green | R$ 2.590.000 | Exclusive Gyn',
+      desc:'Casa térrea de alto padrão no Portal do Sol Green, Goiânia. 4 suítes, piscina privativa, condomínio fechado premium. Corretor em Goiânia — Exclusive Gyn.',
+      img:'https://lh3.googleusercontent.com/d/14TqOuHg-dqWAikA4nOfRdW-KCyB7z6PV=s1200'
+    },
+    'opus-gyro-rooftop-setor-marista':{
+      title:'Opus Gyro Rooftop Setor Marista | R$ 650.000 | Exclusive Gyn',
+      desc:'Apartamento Opus Gyro Rooftop no Setor Marista, Goiânia. Rooftop com piscina de borda infinita, 1 suíte, 47m². Corretor em Goiânia.',
+      img:'https://res.cloudinary.com/dvswv9ikn/image/upload/q_auto,f_auto/Murilo_-_Opus_Gyro_Rooftop_-_Marista-1_mbli5k'
+    },
+    'blanc-casa-design-ap-603':{
+      title:'Blanc Casa Design Ap. 603 | R$ 1.350.000 | Exclusive Gyn',
+      desc:'Apartamento semimobiliado no Blanc Casa Design, Setor Bueno, Goiânia. 137m², 3 suítes, elevador privativo, arquitetura Triptyque.',
+      img:'https://res.cloudinary.com/dvswv9ikn/image/upload/q_auto,f_auto/IMG_8675_v0amyn'
+    }
+  };
+  function setOG(name,val){
+    var el=document.querySelector('meta[property="'+name+'"]')||document.querySelector('meta[name="'+name+'"]');
+    if(el)el.setAttribute('content',val);
+  }
+  var path=window.location.pathname;
+  if(path.indexOf('/imovel/')===0){
+    var slug=path.replace('/imovel/','').replace(/\/$/,'');
+    var d=OG[slug];
+    if(d){
+      document.title=d.title;
+      setOG('og:title',d.title);
+      setOG('og:description',d.desc);
+      setOG('og:image',d.img);
+      setOG('og:url',window.location.href);
+      setOG('twitter:title',d.title);
+      setOG('twitter:description',d.desc);
+      setOG('twitter:image',d.img);
+      setOG('description',d.desc);
+    }
+  }
+})();
+
 var D=[
 {id:'1',t:'casa',tt:'Casa Térrea Portal do Sol Green',p:2590000,b:'Portal do Sol Green',e:'Condomínio Portal do Sol Green, Goiânia',a:252,tr:469,q:3,bn:3,v:2,st:'disponivel',sl:'destaque',cr:['Piscina aquecida 10x3m com hidro','Churrasqueira','3 suítes plenas','Suíte master com closet e banheira','Office (possível 4ª suíte)','Pé direito alto','Iluminação natural','Fachada com pedra Escandinávia','Automação completa (janelas e portas)','Som JBL na área gourmet','Alexa integrada','Estrutura de sobrado','Esquadrias Gold','Portas Pormade','Marcenaria com cristaleira','Paisagismo completo','Água aquecida (boiler)','Iluminação completa','Grama em toda área externa','Calçada com Fulget'],ds:'Espetacular casa térrea com acabamento impecável no Portal do Sol Green. São 252m² de área construída em um lote de 469m², com 3 suítes plenas sendo 1 master com armários, closet e banheira. Conta ainda com 1 office que pode ser convertido em suíte. Destaque para a piscina aquecida de 10x3m com hidromassagem e iluminação, fachada revestida em pedra natural Escandinávia, automação completa incluindo janelas e portas, sistema de som JBL integrado e assistente Alexa. Estrutura preparada para sobrado, esquadrias Gold, portas Pormade e marcenaria na cozinha com cristaleira. Paisagismo e iluminação completos.',g1:'#0f2a1a',g2:'#1a3a28',
 imgs:[
@@ -2214,14 +2282,14 @@ var SEO_DATA={
     description:'Curadoria de imóveis de alto padrão em Goiânia. Corretor em Goiânia especializado em investimento imobiliário. Imóveis em Goiânia com valorização de 13,4% em 2025. 3º maior mercado imobiliário do Brasil.',
     keywords:'imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, imobiliária goiânia, apartamento goiânia, casa goiânia, investimento imobiliário goiânia, imóveis alto padrão goiânia, comprar imóvel goiânia',
     url:'https://exclusivegyn.com.br',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   },
   lancamentos:{
     title:'Lançamentos Imobiliários em Goiânia 2026 | Exclusive Gyn — Corretor Goiânia',
     description:'Lançamentos imobiliários exclusivos em Goiânia. Oportunidades de pré-lançamento para investidores. Imóveis em Goiânia com alto potencial de valorização. Corretor em Goiânia especializado.',
     keywords:'lançamentos imobiliários goiânia, lançamento goiânia 2026, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, pré-lançamento goiânia, investimento imobiliário goiânia, apartamento goiânia lançamento',
     url:'https://exclusivegyn.com.br/lancamentos',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   },
   nativ:{
     title:'NATIV Parque Areião | Lançamento em Goiânia — Studios e Apartamentos | Exclusive Gyn',
@@ -2235,63 +2303,63 @@ var SEO_DATA={
     description:'Exclusive Gyn: curadoria de imóveis de alto padrão em Goiânia. Corretores seniores Eduardo Rodrigues e Murilo Occhiena. Imóveis em Goiânia selecionados com critério. Seu corretor em Goiânia.',
     keywords:'corretor goiania, corretor em goiânia, imobiliária goiânia, imóveis em goiânia, imovel em goiania, exclusive gyn, corretor de imóveis goiânia, imóveis alto padrão goiânia',
     url:'https://exclusivegyn.com.br/sobre',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   },
   sobmedida:{
     title:'Imóvel Sob Medida em Goiânia | Encontre o Imóvel Ideal | Exclusive Gyn',
     description:'Encontre o imóvel ideal em Goiânia. Atendimento personalizado com corretor em Goiânia especializado em alto padrão. Imóveis em Goiânia selecionados conforme seu perfil de investimento.',
     keywords:'imóvel sob medida goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, comprar imóvel goiânia, apartamento goiânia, casa goiânia, investimento imobiliário',
     url:'https://exclusivegyn.com.br/sob-medida',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   },
   privacidade:{
     title:'Política de Privacidade | Exclusive Gyn — Imóveis em Goiânia',
     description:'Política de privacidade e proteção de dados da Exclusive Gyn. Transparência no tratamento de dados conforme LGPD.',
     keywords:'política de privacidade, LGPD, exclusive gyn, imóveis goiânia',
     url:'https://exclusivegyn.com.br/privacidade',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   },
   art1:{
     title:'Goiânia: 3º Maior Mercado Imobiliário do Brasil | Exclusive Gyn',
     description:'Goiânia é o 3º maior mercado imobiliário do Brasil com R$ 8,1 bilhões em vendas. Descubra por que imóveis em Goiânia são o investimento mais inteligente. Corretor em Goiânia.',
     keywords:'mercado imobiliário goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, investimento goiânia, valorização imóveis goiânia',
     url:'https://exclusivegyn.com.br/artigo/goiania-3-maior-mercado-imobiliario',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   },
   art2:{
     title:'Por que Investir em Imóveis em Goiânia é Inteligente | Exclusive Gyn',
     description:'Investir em imóveis em Goiânia: valorização de 13,4% em 2025, alta liquidez e segurança patrimonial. Corretor em Goiânia apresenta os dados. Imovel em Goiania com rentabilidade real.',
     keywords:'investir imóveis goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, rentabilidade imóveis goiânia, valorização goiânia',
     url:'https://exclusivegyn.com.br/artigo/por-que-investir-em-imoveis-em-goiania',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   },
   art3:{
     title:'Setores Mais Valorizados de Goiânia em 2026 | Exclusive Gyn',
     description:'Conheça os setores mais valorizados de Goiânia em 2026. Marista, Bueno, Oeste e mais. Imóveis em Goiânia nos melhores bairros. Corretor em Goiânia especializado.',
     keywords:'setores valorizados goiânia, bairros goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, setor marista, setor bueno, setor oeste',
     url:'https://exclusivegyn.com.br/artigo/setores-mais-valorizados-goiania-2026',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   },
   art4:{
     title:'Qualidade de Vida em Goiânia: Saúde, Segurança e Lazer | Exclusive Gyn',
     description:'Qualidade de vida em Goiânia: Hospital Albert Einstein, redução de 92% na violência, 70 parques. Imóveis em Goiânia em uma cidade que não para de crescer. Corretor em Goiânia.',
     keywords:'qualidade de vida goiânia, morar em goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, segurança goiânia, saúde goiânia',
     url:'https://exclusivegyn.com.br/artigo/qualidade-de-vida-em-goiania',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   },
   art5:{
     title:'Casa ou Apartamento em Goiânia? Como Escolher | Exclusive Gyn',
     description:'Casa ou apartamento em Goiânia? Guia completo para escolher o imóvel ideal. Imóveis em Goiânia para todos os perfis. Corretor em Goiânia orienta sua decisão.',
     keywords:'casa goiânia, apartamento goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, comprar imóvel goiânia, casa ou apartamento',
     url:'https://exclusivegyn.com.br/artigo/casa-ou-apartamento-imovel-ideal-goiania',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   },
   art6:{
     title:'Goiânia Cidade Inteligente: Megaprojetos que Transformam | Exclusive Gyn',
     description:'Megaprojetos em Goiânia: MotoGP, Foster + Partners, Albert Einstein, Pininfarina. Imóveis em Goiânia valorizando com infraestrutura de classe mundial. Corretor em Goiânia.',
     keywords:'megaprojetos goiânia, cidade inteligente goiânia, imóveis em goiânia, imovel em goiania, corretor goiania, corretor em goiânia, motogp goiânia, foster partners goiânia',
     url:'https://exclusivegyn.com.br/artigo/goiania-cidade-inteligente-megaprojetos',
-    image:'https://exclusivegyn.com.br/og-image.jpg'
+    image:'https://res.cloudinary.com/dvswv9ikn/image/upload/f_auto,q_auto:best,w_1200/v1779472789/1_agv6ch.png'
   }
 };
 
